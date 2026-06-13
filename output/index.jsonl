@@ -11,3 +11,4 @@
 {"method": "spacy", "version": "v1.2.0", "run_id": "50078052", "timestamp": "2026-06-13T03:08:19Z", "source": "Commons2007IntroMHC.pdf", "triples": 334, "path": "output/spacy/20260613T030819Z__spacy__v1.2.0__50078052.ttl"}
 {"method": "spacy", "version": "v1.2.0", "run_id": "33fe4018", "timestamp": "2026-06-13T03:31:25Z", "source": "NonBijectiveText.txt", "triples": 12, "path": "output/spacy/20260613T033125Z__spacy__v1.2.0__33fe4018.ttl"}
 {"method": "spacy", "version": "v1.3.0", "run_id": "b9a1391b", "timestamp": "2026-06-13T03:39:43Z", "source": "NonBijectiveText.txt", "triples": 14, "path": "output/spacy/20260613T033943Z__spacy__v1.3.0__b9a1391b.ttl"}
+{"method": "spacy", "version": "v1.3.0", "run_id": "203bb2da", "timestamp": "2026-06-13T03:44:59Z", "source": "Knowledge.md", "triples": 105, "path": "output/spacy/20260613T034459Z__spacy__v1.3.0__203bb2da.ttl"}

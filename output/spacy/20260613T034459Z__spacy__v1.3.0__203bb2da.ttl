@@ -1,0 +1,550 @@
+# @run-id    203bb2da
+# @method    spacy
+# @version   v1.3.0
+# @timestamp 2026-06-13T03:44:59Z
+# @source    Knowledge.md
+# @triples   105
+
+@prefix ex: <http://example.org/kg/entity/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rel: <http://example.org/kg/relation/> .
+
+ex:2_Coordination_Fees rdfs:label """2 . * * Coordination Fees * *  
+   """ ;
+    rel:Charged ex:vendor_communication_work_order_management_and_verification ;
+    rel:Charged_for ex:scheduling .
+
+ex:A_client rdfs:label "A client" ;
+    rel:threatens ex:legal_action .
+
+ex:A_complete_work_order rdfs:label "A complete work order" ;
+    rel:includes ex:Property_address_Issue_description_Issue_location_Priority_level_Contact_information_Access_instructions_Photos_or_videos_Vendor_assignment_if_applicable_Current_status_Completion_notes_Inspection_Report_An_inspection_report .
+
+ex:A_good_client_update rdfs:label "A good client update" ;
+    rel:include ex:What_was_reported_Current_status_Next_action_Responsible_party_Expected_timing .
+
+ex:A_tenant rdfs:label "A tenant" ;
+    rel:reports ex:unsafe_conditions .
+
+ex:A_vendor rdfs:label "A vendor" ;
+    rel:requests ex:additional_cost_approval .
+
+ex:After_hours_scheduling rdfs:label "After - hours scheduling" ;
+    rel:be ex:available_for_Emergency_dispatch_Pre_approved_client_requests_Properties_with_restricted_access_windows_Critical_business_operations .
+
+ex:Any_condition_that_presents_immediate_risk_to_life_or_safety rdfs:label """Any condition that presents immediate risk to life or safety 
+
+""" ;
+    rel:advise ex:the_user .
+
+ex:Authorized_Client_An_authorized_client rdfs:label """Authorized Client 
+
+ An * * authorized client *""" ;
+    rel:is ex:a_person_permitted_to_approve_costs_schedule_service_access_account_information_or_change_service_scope .
+
+ex:Authorized_clients rdfs:label "Authorized clients" ;
+    rel:approve ex:repairs .
+
+ex:Core_Response_Rules rdfs:label """--- 
+
+ # # Core Response Rules 
+
+""" ;
+    rel:follow ex:these_rules .
+
+ex:Document_Handling rdfs:label """--- 
+
+ # # Document Handling 
+
+""" ;
+    rel:summarize ex:documents_provided_by_the_user_including_Inspection_reports_Vendor_notes_Work_orders_Emails_Maintenance_logs .
+
+ex:Flag_urgent_safety_concerns rdfs:label """- Flag urgent safety concerns . 
+""" ;
+    rel:Avoid ex:unsupported_technical_conclusions .
+
+ex:I rdfs:label "I" ;
+    rel:approve ex:this_repair ;
+    rel:explain ex:the_general_status_categories ;
+    rel:not_have ex:access_to_a_specific_work_order ;
+    rel:structure ex:this ;
+    rel:structure_as ex:a_work_order .
+
+ex:Inspection_date_Inspector_name_Areas rdfs:label """Inspection date 
+ - Inspector name 
+ - Areas""" ;
+    rel:reviewed ex:Observed_conditions_Photos_Severity_ratings_Recommended_actions_Follow_up_requirements,
+        ex:_blank .
+
+ex:It rdfs:label "It" ;
+    rel:not_contain ex:real_time_work_order_status_customer_records_vendor_availability_prices_contracts_or_emergency_contact_information .
+
+ex:Key_Definitions_Work_Order_A_work_order rdfs:label """--- 
+
+ # # Key Definitions 
+
+ # # # Work Order 
+
+ A * * work order""" ;
+    rel:is ex:a_tracked_request_for_inspection_repair_maintenance_or_vendor_action .
+
+ex:Known_Limitations rdfs:label """--- 
+
+ # # Known Limitations 
+
+""" ;
+    rel:not_include ex:Final_Instruction_Use_this_knowledgebase_as_a_stable_reference_for_general_answers_about_Northstar_Field_Services,
+        ex:Live_account_records_Actual_work_order_data_Real_vendor_schedules_Real_client_contracts_Real_emergency_phone_numbers_Exact_pricing_Local_legal_requirements_Insurance_policy_terms .
+
+ex:Main_Service_Areas_Northstar rdfs:label """Main Service Areas 
+
+ Northstar""" ;
+    rel:provides ex:_blank .
+
+ex:Northstar rdfs:label "Northstar" ;
+    rel:not_perform ex:every_repair .
+
+ex:Organization_Summary_Northstar_Field_Services rdfs:label """--- 
+
+ # # Organization Summary 
+
+ * * Northstar Field Services * *""" ;
+    rel:is ex:a_fictional_regional_operations_company_that_helps_commercial_property_owners_and_managers_coordinate_inspections_maintenance_repairs_and_vendor_follow_up .
+
+ex:Photo_documentation_Compliance_tracking_support_Client_status rdfs:label """Photo documentation 
+ - Compliance tracking support 
+ - Client status""" ;
+    rel:updates ex:User_Types_The_assistant_may_interact_with_several_types_of_users .
+
+ex:Photos_described_by_the_user rdfs:label """Photos described by the user 
+
+""" ;
+    rel:Preserve ex:dates_and_property_names .
+
+ex:Priority_Levels_Northstar rdfs:label """--- 
+
+ # # Priority Levels 
+
+ Northstar""" ;
+    rel:uses ex:four_general_priority_levels .
+
+ex:Request rdfs:label "| Request" ;
+    rel:is ex:active .
+
+ex:Scheduling_Policy_Normal_scheduling rdfs:label """# # Scheduling Policy 
+
+ Normal scheduling""" ;
+    rel:takes ex:place ;
+    rel:takes_during ex:business_hours .
+
+ex:Separate_facts_from_recommendations rdfs:label """- Separate facts from recommendations . 
+""" ;
+    rel:Identify ex:missing_information .
+
+ex:Standard_Work_Order_Intake rdfs:label """--- 
+
+ # # Standard Work Order Intake 
+
+""" ;
+    rel:collect ex:1 ;
+    rel:collect_For ex:a_normal_work_order_request .
+
+ex:Status_Categories_A_work_order rdfs:label """--- 
+
+ # # Status Categories 
+
+ A work order""" ;
+    rel:have ex:one_of_the_following_statuses .
+
+ex:Tenant_Communication_Limits_Tenants rdfs:label """# # Tenant Communication Limits 
+
+ Tenants""" ;
+    rel:report ex:issues .
+
+ex:Tenants rdfs:label "Tenants" ;
+    rel:not_approve ex:_blank,
+        ex:billable_work .
+
+ex:The_assistant rdfs:label "The assistant" ;
+    rel:avoid ex:exaggerated_reassurance_unsupported_certainty_and_casual_filler ;
+    rel:classify ex:issues ;
+    rel:compare ex:the_issue_against_the_emergency_criteria ;
+    rel:determine ex:the_user_s_role ;
+    rel:follow ex:these_rules ;
+    rel:interact_with ex:several_types_of_users ;
+    rel:not_guarantee ex:a_specific_appointment_time ;
+    rel:not_invent ex:a_status ;
+    rel:not_minimize ex:emergency_reports ;
+    rel:not_provide ex:exact_prices ;
+    rel:provide ex:general_timing ;
+    rel:state ex:a_status ;
+    rel:summarize ex:documents_provided_by_the_user_including_Inspection_reports_Vendor_notes_Work_orders_Emails_Maintenance_logs ;
+    rel:use ex:this_document ;
+    rel:use_as ex:its_primary_source_of_truth .
+
+ex:The_following_issues rdfs:label "The following issues" ;
+    rel:qualify_as ex:emergencies_Active_flooding_Fire_smoke_or_burning_smell_Gas_smell_or_suspected_gas_leak_Sparking_electrical_equipment_Structural_collapse_or_severe_instability_Sewage_backup_in_occupied_areas_Forced_entry_or_inability_to_secure_a_property_No_heat_during_legally_protected_cold_weather_periods_No_electricity_in_an_occupied_commercial_space .
+
+ex:The_issue rdfs:label "The issue" ;
+    rel:is ex:a_possible_P1_emergency .
+
+ex:The_next_step rdfs:label "The next step" ;
+    rel:is ex:vendor_assignment .
+
+ex:The_user rdfs:label "The user" ;
+    rel:disputes ex:a_charge ;
+    rel:requests ex:cancellation .
+
+ex:The_vendor rdfs:label "The vendor" ;
+    rel:not_proceed ex:Tenant_Report ;
+    rel:not_proceed_with ex:additional_billable_work .
+
+ex:This rdfs:label "This" ;
+    rel:qualify_as ex:an_emergency .
+
+ex:This_document rdfs:label "This document" ;
+    rel:not_is ex:a_live_database .
+
+ex:This_knowledgebase rdfs:label "This knowledgebase" ;
+    rel:is ex:a_compact_internal_reference_for_an_LLM_assistant_supporting_a_fictional_company_called_Northstar_Field_Services ;
+    rel:not_include ex:Final_Instruction_Use_this_knowledgebase_as_a_stable_reference_for_general_answers_about_Northstar_Field_Services,
+        ex:Live_account_records_Actual_work_order_data_Real_vendor_schedules_Real_client_contracts_Real_emergency_phone_numbers_Exact_pricing_Local_legal_requirements_Insurance_policy_terms .
+
+ex:Tone_and_Style_The_assistant rdfs:label """--- 
+
+ # # Tone and Style 
+
+ The assistant""" ;
+    rel:use ex:a_professional_operational_tone .
+
+ex:User_Type_Description_Typical_Requests_Client_Property_owner_manager_or rdfs:label """| User Type | Description | Typical Requests | 
+ |---|---|---| 
+ | Client | Property owner , manager , or""" ;
+    rel:authorized ex:representative_Status_updates_scheduling_approvals .
+
+ex:Vendor_Costs rdfs:label """Vendor Costs * *  
+   """ ;
+    rel:Passed_from ex:vendors ;
+    rel:Passed_with ex:a_management_markup .
+
+ex:Vendor_Rules_Approved_vendors rdfs:label """--- 
+
+ # # Vendor Rules 
+
+ Approved vendors""" ;
+    rel:Confirm ex:arrival_time_Confirm_departure_time .
+
+ex:Vendors rdfs:label "Vendors" ;
+    rel:not_discuss ex:final_billing ;
+    rel:not_discuss_with ex:tenants .
+
+ex:a_tenant rdfs:label "a tenant" ;
+    rel:report ex:an_issue ;
+    rel:report_For ex:example .
+
+ex:not_Approve_paid_repairs_Change_repair_scope_Authorize_overtime_Access_owner_billing_records rdfs:label """not : 
+
+ - Approve paid repairs 
+ - Change repair scope 
+ - Authorize overtime 
+ - Access owner billing records 
+""" ;
+    rel:Receive ex:confidential_client_information .
+
+ex:that rdfs:label "that" ;
+    rel:helps ex:commercial_property_owners_and_managers_coordinate_inspections_maintenance_repairs_and_vendor_follow_up ;
+    rel:presents ex:immediate_risk_to_life_or_safety .
+
+ex:the_assistant rdfs:label "the assistant" ;
+    rel:Preserve ex:dates_and_property_names ;
+    rel:advise ex:the_user ;
+    rel:focus_on ex:issue_intake_safety_and_routing ;
+    rel:request ex:source_data_or_escalate_to_an_authorized_system_or_human_coordinator .
+
+ex:the_issue rdfs:label "the issue" ;
+    rel:be ex:P1_or_P2 ;
+    rel:involves ex:immediate_danger ;
+    rel:started ex:8 .
+
+ex:the_situation rdfs:label "the situation" ;
+    rel:involve ex:immediate_danger .
+
+ex:the_user_or_an_authoritative_system rdfs:label "the user or an authoritative system" ;
+    rel:provided ex:it .
+
+ex:the_user_type rdfs:label "the user type" ;
+    rel:is ex:unclear .
+
+ex:user_requests rdfs:label "user requests" ;
+    rel:depend_on ex:account_specific_information .
+
+ex:you rdfs:label "you" ;
+    rel:provide ex:the_work_order_details ;
+    rel:tell ex:me,
+        ex:the_status_of_my_work_order .
+
+ex:1 rdfs:label "1" .
+
+ex:8 rdfs:label "8" .
+
+ex:Observed_conditions_Photos_Severity_ratings_Recommended_actions_Follow_up_requirements rdfs:label """- Observed conditions 
+ - Photos 
+ - Severity ratings 
+ - Recommended actions 
+ - Follow - up requirements 
+
+""" .
+
+ex:P1_or_P2 rdfs:label "P1 or P2" .
+
+ex:Property_address_Issue_description_Issue_location_Priority_level_Contact_information_Access_instructions_Photos_or_videos_Vendor_assignment_if_applicable_Current_status_Completion_notes_Inspection_Report_An_inspection_report rdfs:label """Property address 
+ - Issue description 
+ - Issue location 
+ - Priority level 
+ - Contact information 
+ - Access instructions 
+ - Photos or videos 
+ - Vendor assignment , if applicable 
+ - Current status 
+ - Completion notes 
+
+ # # # Inspection Report 
+
+ An * * inspection report""" .
+
+ex:Tenant_Report rdfs:label """# # # Tenant Report 
+
+""" .
+
+ex:User_Types_The_assistant_may_interact_with_several_types_of_users rdfs:label """# # User Types 
+
+ The assistant may interact with several types of users""" .
+
+ex:What_was_reported_Current_status_Next_action_Responsible_party_Expected_timing rdfs:label """What was reported 
+ - Current status 
+ - Next action 
+ - Responsible party 
+ - Expected timing ,""" .
+
+ex:a_charge rdfs:label "a charge" .
+
+ex:a_compact_internal_reference_for_an_LLM_assistant_supporting_a_fictional_company_called_Northstar_Field_Services rdfs:label "a compact internal reference for an LLM assistant supporting a fictional company called * * Northstar Field Services * *" .
+
+ex:a_fictional_regional_operations_company_that_helps_commercial_property_owners_and_managers_coordinate_inspections_maintenance_repairs_and_vendor_follow_up rdfs:label "a fictional regional operations company that helps commercial property owners and managers coordinate inspections , maintenance , repairs , and vendor follow - up" .
+
+ex:a_live_database rdfs:label "a live database" .
+
+ex:a_management_markup rdfs:label "a management markup" .
+
+ex:a_normal_work_order_request rdfs:label "a normal work order request" .
+
+ex:a_possible_P1_emergency rdfs:label "a possible P1 emergency" .
+
+ex:a_professional_operational_tone rdfs:label "a professional , operational tone" .
+
+ex:a_specific_appointment_time rdfs:label "a specific appointment time" .
+
+ex:a_structured_document_created_after_a_property_review rdfs:label "a structured document created after a property review" .
+
+ex:a_valid_source rdfs:label "a valid source" .
+
+ex:a_work_order rdfs:label "a work order" .
+
+ex:access_to_a_specific_work_order rdfs:label "access to a specific work order" .
+
+ex:account_specific_information rdfs:label "account - specific information" .
+
+ex:active rdfs:label "active" .
+
+ex:active_water_intrusion rdfs:label "active water intrusion" .
+
+ex:additional_billable_work rdfs:label "additional billable work" .
+
+ex:additional_cost_approval rdfs:label "additional cost approval" .
+
+ex:an_issue rdfs:label "an issue" .
+
+ex:an_urgent_condition rdfs:label "an urgent condition" .
+
+ex:arrival_time_Confirm_departure_time rdfs:label """arrival time 
+ - Confirm departure time 
+""" .
+
+ex:available_for_Emergency_dispatch_Pre_approved_client_requests_Properties_with_restricted_access_windows_Critical_business_operations rdfs:label """available for : 
+
+ - Emergency dispatch 
+ - Pre - approved client requests 
+ - Properties with restricted access windows 
+ - Critical business operations 
+
+""" .
+
+ex:billable_work rdfs:label "billable work" .
+
+ex:building_operations rdfs:label "building operations" .
+
+ex:business_hours rdfs:label "business hours" .
+
+ex:cancellation rdfs:label "cancellation" .
+
+ex:commercial_property_owners_and_managers_coordinate_inspections_maintenance_repairs_and_vendor_follow_up rdfs:label "commercial property owners and managers coordinate inspections , maintenance , repairs , and vendor follow - up" .
+
+ex:communication_documentation_scheduling_quality_checks_and_vendor_coordination rdfs:label "communication , documentation , scheduling , quality checks , and vendor coordination" .
+
+ex:confidential_client_information rdfs:label """confidential client information 
+""" .
+
+ex:emergencies_Active_flooding_Fire_smoke_or_burning_smell_Gas_smell_or_suspected_gas_leak_Sparking_electrical_equipment_Structural_collapse_or_severe_instability_Sewage_backup_in_occupied_areas_Forced_entry_or_inability_to_secure_a_property_No_heat_during_legally_protected_cold_weather_periods_No_electricity_in_an_occupied_commercial_space rdfs:label """emergencies : 
+
+ - Active flooding 
+ - Fire , smoke , or burning smell 
+ - Gas smell or suspected gas leak 
+ - Sparking electrical equipment 
+ - Structural collapse or severe instability 
+ - Sewage backup in occupied areas 
+ - Forced entry or inability to secure a property 
+ - No heat during legally protected cold - weather periods 
+ - No electricity in an occupied commercial space 
+""" .
+
+ex:emergency_reports rdfs:label "emergency reports" .
+
+ex:every_repair rdfs:label "every repair" .
+
+ex:exact_prices rdfs:label "exact prices" .
+
+ex:exaggerated_reassurance_unsupported_certainty_and_casual_filler rdfs:label "exaggerated reassurance , unsupported certainty , and casual filler" .
+
+ex:example rdfs:label "example" .
+
+ex:final_billing rdfs:label "final billing" .
+
+ex:four_general_priority_levels rdfs:label "four general priority levels" .
+
+ex:general_timing rdfs:label "general timing" .
+
+ex:immediate_risk_to_life_or_safety rdfs:label """immediate risk to life or safety 
+
+""" .
+
+ex:issue_intake_safety_and_routing rdfs:label "issue intake , safety , and routing" .
+
+ex:it rdfs:label "it" ;
+    rel:affects ex:building_operations ;
+    rel:involves ex:active_water_intrusion ;
+    rel:manages ex:communication_documentation_scheduling_quality_checks_and_vendor_coordination .
+
+ex:its_primary_source_of_truth rdfs:label "its primary source of truth" .
+
+ex:legal_action rdfs:label "legal action" .
+
+ex:me rdfs:label "me" .
+
+ex:missing_information rdfs:label "missing information" .
+
+ex:one_of_the_following_statuses rdfs:label """one of the following statuses : 
+
+""" .
+
+ex:place rdfs:label "place" .
+
+ex:real_time_work_order_status_customer_records_vendor_availability_prices_contracts_or_emergency_contact_information rdfs:label "real - time work order status , customer records , vendor availability , prices , contracts , or emergency contact information" .
+
+ex:repairs rdfs:label "repairs" .
+
+ex:representative_Status_updates_scheduling_approvals rdfs:label "representative | Status updates , scheduling , approvals" .
+
+ex:scheduling rdfs:label "scheduling" .
+
+ex:several_types_of_users rdfs:label "several types of users" .
+
+ex:source_data_or_escalate_to_an_authorized_system_or_human_coordinator rdfs:label "source data or escalate to an authorized system or human coordinator" .
+
+ex:tenants rdfs:label "tenants" .
+
+ex:that_information rdfs:label "that information" .
+
+ex:the_general_status_categories rdfs:label "the general status categories" .
+
+ex:the_issue_against_the_emergency_criteria rdfs:label "the issue against the emergency criteria" .
+
+ex:the_status_of_my_work_order rdfs:label "the status of my work order" .
+
+ex:the_user_s_role rdfs:label "the user ’s role" .
+
+ex:the_work_order_details rdfs:label "the work order details" .
+
+ex:this rdfs:label "this" ;
+    rel:Is ex:an_emergency .
+
+ex:this_document rdfs:label "this document" .
+
+ex:this_repair rdfs:label "this repair" .
+
+ex:unclear rdfs:label "unclear" .
+
+ex:unsafe_conditions rdfs:label "unsafe conditions" .
+
+ex:unsupported_technical_conclusions rdfs:label "unsupported technical conclusions" .
+
+ex:vendor_assignment rdfs:label "vendor assignment" .
+
+ex:vendor_communication_work_order_management_and_verification rdfs:label ", vendor communication , work order management , and verification" .
+
+ex:vendors rdfs:label "vendors" .
+
+ex:verified_scheduling_information rdfs:label "verified scheduling information" .
+
+ex:Final_Instruction_Use_this_knowledgebase_as_a_stable_reference_for_general_answers_about_Northstar_Field_Services rdfs:label """# # Final Instruction 
+
+ Use this knowledgebase as a stable reference for general answers about Northstar Field Services""" .
+
+ex:Live_account_records_Actual_work_order_data_Real_vendor_schedules_Real_client_contracts_Real_emergency_phone_numbers_Exact_pricing_Local_legal_requirements_Insurance_policy_terms rdfs:label """- Live account records 
+ - Actual work order data 
+ - Real vendor schedules 
+ - Real client contracts 
+ - Real emergency phone numbers 
+ - Exact pricing 
+ - Local legal requirements 
+ - Insurance policy terms 
+
+""" .
+
+ex:a_person_permitted_to_approve_costs_schedule_service_access_account_information_or_change_service_scope rdfs:label "a person permitted to approve costs , schedule service , access account information , or change service scope" .
+
+ex:a_status rdfs:label "a status" .
+
+ex:a_tracked_request_for_inspection_repair_maintenance_or_vendor_action rdfs:label "a tracked request for inspection , repair , maintenance , or vendor action" .
+
+ex:an_emergency rdfs:label "an emergency" .
+
+ex:dates_and_property_names rdfs:label "dates and property names" .
+
+ex:documents_provided_by_the_user_including_Inspection_reports_Vendor_notes_Work_orders_Emails_Maintenance_logs rdfs:label """documents provided by the user , including : 
+
+ - Inspection reports 
+ - Vendor notes 
+ - Work orders 
+ - Emails 
+ - Maintenance logs 
+ -""" .
+
+ex:immediate_danger rdfs:label "immediate danger" .
+
+ex:issues rdfs:label "issues" .
+
+ex:the_user rdfs:label "the user" ;
+    rel:provides ex:that_information,
+        ex:verified_scheduling_information ;
+    rel:reports ex:an_urgent_condition ;
+    rel:supplies ex:a_valid_source .
+
+ex:these_rules rdfs:label """these rules : 
+
+""" .
+
+ex:_blank rdfs:label "# # #" ;
+    rel:is ex:a_person_permitted_to_approve_costs_schedule_service_access_account_information_or_change_service_scope,
+        ex:a_structured_document_created_after_a_property_review,
+        ex:a_tracked_request_for_inspection_repair_maintenance_or_vendor_action .
+
