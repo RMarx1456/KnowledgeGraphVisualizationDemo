@@ -1,0 +1,12 @@
+# Python virtual env (recreate with: python3 -m venv .venv && pip install -r requirements.txt)
+.venv/
+
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Rendered graph images — regenerable from output/*.ttl via scripts/visualize.py
+viz/
+
+# Note: output/ is intentionally tracked — the .ttl runs and index.jsonl are the
+# retrievable, versioned artifacts this project produces.

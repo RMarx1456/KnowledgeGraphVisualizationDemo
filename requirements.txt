@@ -1,0 +1,9 @@
+# Lightweight, CPU-only triple extraction — runs anywhere, no GPU/LLM needed.
+
+# Shared RDF layer — emits terse Turtle via RDFLib
+rdflib>=7.0
+
+# spaCy approach (dependency-parse triple extraction)
+spacy>=3.7
+# en_core_web_sm is installed separately:
+#   python -m spacy download en_core_web_sm

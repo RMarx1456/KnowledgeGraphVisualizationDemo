@@ -1,0 +1,4 @@
+{"method": "spacy", "version": "v1.0.0", "run_id": "0f240588", "timestamp": "2026-06-13T02:12:14Z", "source": "SmallHandwritten.txt", "triples": 3, "path": "output/spacy/20260613T021214Z__spacy__v1.0.0__0f240588.ttl"}
+{"method": "spacy", "version": "v1.0.0", "run_id": "19bc5a65", "timestamp": "2026-06-13T02:18:39Z", "source": "SmallHandwritten.txt", "triples": 3, "path": "output/spacy/20260613T021839Z__spacy__v1.0.0__19bc5a65.ttl"}
+{"method": "spacy", "version": "v1.0.0", "run_id": "a653bab9", "timestamp": "2026-06-13T02:23:29Z", "source": "SmallHandwritten.txt", "triples": 3, "path": "output/spacy/20260613T022329Z__spacy__v1.0.0__a653bab9.ttl"}
+{"method": "spacy", "version": "v1.1.0", "run_id": "ed2364b8", "timestamp": "2026-06-13T02:30:10Z", "source": "SmallHandwritten.txt", "triples": 3, "path": "output/spacy/20260613T023010Z__spacy__v1.1.0__ed2364b8.ttl"}
