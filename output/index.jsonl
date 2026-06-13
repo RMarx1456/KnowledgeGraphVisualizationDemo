@@ -5,3 +5,7 @@
 {"method": "spacy", "version": "v1.1.0", "run_id": "59217e1d", "timestamp": "2026-06-13T02:40:28Z", "source": "SmallHandwritten.txt", "triples": 3, "path": "output/spacy/20260613T024028Z__spacy__v1.1.0__59217e1d.ttl"}
 {"method": "spacy", "version": "v1.1.0", "run_id": "8aec5a03", "timestamp": "2026-06-13T02:40:29Z", "source": "SmallHandwritten.txt", "triples": 3, "path": "output/spacy/20260613T024029Z__spacy__v1.1.0__8aec5a03.ttl"}
 {"method": "spacy", "version": "v1.1.0", "run_id": "c4691df2", "timestamp": "2026-06-13T02:40:30Z", "source": "SmallHandwritten.txt", "triples": 3, "path": "output/spacy/20260613T024030Z__spacy__v1.1.0__c4691df2.ttl"}
+{"method": "spacy", "version": "v1.1.0", "run_id": "62ba0d5b", "timestamp": "2026-06-13T02:45:19Z", "source": "SmallHandwritten.txt", "triples": 3, "path": "output/spacy/20260613T024519Z__spacy__v1.1.0__62ba0d5b.ttl"}
+{"method": "spacy", "version": "v1.2.0", "run_id": "6e89bce8", "timestamp": "2026-06-13T02:49:45Z", "source": "SmallHandwritten.txt", "triples": 3, "path": "output/spacy/20260613T024945Z__spacy__v1.2.0__6e89bce8.ttl"}
+{"method": "spacy", "version": "v1.2.0", "run_id": "470b3ec3", "timestamp": "2026-06-13T03:02:29Z", "source": "Commons2007IntroMHC.pdf", "triples": 334, "path": "output/spacy/20260613T030229Z__spacy__v1.2.0__470b3ec3.ttl"}
+{"method": "spacy", "version": "v1.2.0", "run_id": "50078052", "timestamp": "2026-06-13T03:08:19Z", "source": "Commons2007IntroMHC.pdf", "triples": 334, "path": "output/spacy/20260613T030819Z__spacy__v1.2.0__50078052.ttl"}

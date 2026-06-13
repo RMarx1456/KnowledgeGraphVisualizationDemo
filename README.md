@@ -61,16 +61,18 @@ fully local. Turtle output (written under `output/spacy/`):
 
 ```turtle
 ex:Cheese rdfs:label "Cheese" ;
-    rel:be ex:pink .
+    rel:is ex:pink .
 ex:Mario rdfs:label "Mario" ;
-    rel:love ex:coins .
+    rel:loves ex:coins .
 ex:Water rdfs:label "Water" ;
-    rel:be ex:spicy .
+    rel:is ex:spicy .
 ```
 
-Questions and the imperative are correctly skipped. Trade-off: it only finds
-what the grammar rules cover, predicates come out as raw lemmas (`be`, `love`)
-rather than a normalized schema, and entities are untyped (no `rdf:type`).
+Predicates are the **verbatim in-text relation** (`is`, `loves`) — deliberately
+*not* lemmatized, to avoid imposing unwanted ontological normalization (spaCy's
+lemmatizer collapses `is`→`be`; see [`docs/DECISIONS.md`](docs/DECISIONS.md)).
+Questions and the imperative are correctly skipped. Trade-off: it only finds what
+the grammar rules cover, and entities are untyped (no `rdf:type`).
 
 ## Output convention (summary)
 

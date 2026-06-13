@@ -1,0 +1,984 @@
+# @run-id    470b3ec3
+# @method    spacy
+# @version   v1.2.0
+# @timestamp 2026-06-13T03:02:29Z
+# @source    Commons2007IntroMHC.pdf
+# @triples   334
+
+@prefix ex: <http://example.org/kg/entity/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rel: <http://example.org/kg/relation/> .
+
+ex:0_calculatory_Human rdfs:label """0 
+
+ calculatory 
+
+ Human""" ;
+    rel:made ex:program_manipulate_0,
+        ex:stimuli_generalization ;
+    rel:made_in ex:a_rote_fashion .
+
+ex:1998 rdfs:label "( 1998 )" ;
+    rel:added ex:3,
+        ex:includes .
+
+ex:5_sentential_Imitate_and_acquire_sequences rdfs:label """5 
+
+ sentential 
+
+ Imitate and acquire sequences 
+""" ;
+    rel:Follows ex:short_sequential_acts_Generalize_match_dependent_task_actions .
+
+ex:A_case_for_a_level_of_reasoning_beyond_Piaget_s_formal_operations rdfs:label """A case for a level of 
+ reasoning beyond Piaget 's formal operations""" ;
+    rel:System ex:atic_and_metasystematic_reasoning .
+
+ex:A_complete_theory_of_human_evolution_of_intelligence_A_commentary_on_Thomas_Wynn_s_Archeology_and_Cognitive_Evolution rdfs:label """A complete theory of 
+ human evolution of intelligence A commentary on Thomas Wynn ’s Archeology and 
+ Cognitive Evolution""" ;
+    rel:consider ex:stage_changes .
+
+ex:A_task_of_order_three rdfs:label """A task of order three 
+""" ;
+    rel:operates ex:a_task_of_order_two_operates_on_a_task_of_order_one_a_simple_task ;
+    rel:operates_on ex:a_task_of_order_two_and .
+
+ex:Actions_at_a_higher_order_of_hierarchical_complexity rdfs:label "Actions at a higher order of hierarchical complexity :" ;
+    rel:defined_in ex:terms_of_actions_at_the_next_lower_order_of_hierarchical_complexity .
+
+ex:Adolescents_and_adults rdfs:label "Adolescents and adults" ;
+    rel:perform_at ex:any_of_the_subsequent_stages .
+
+ex:All_tasks rdfs:label "All tasks" ;
+    rel:have ex:an_order_of_hierarchical_complexity_3 .
+
+ex:An_orderthree_task rdfs:label "An orderthree task" ;
+    rel:has ex:three_concatenation_operations .
+
+ex:Commons rdfs:label "Commons" ;
+    rel:adds ex:three_postformal_stages .
+
+ex:Correlations_of_similar_magnitude rdfs:label """Correlations 
+ of similar magnitude""" ;
+    rel:found_in ex:a_number_of_the_studies .
+
+ex:Cross_cultural_developmentalists_and_animal_developmentalists_evolutionary_psychologists_organiza_tional_psychologists_and_developmental_political_psychologists rdfs:label """Cross - cultural developmentalists and 
+ animal developmentalists ; evolutionary psychologists , organiza- 
+
+ tional psychologists , and developmental political psychologists ; 
+""" ;
+    rel:learning ex:theorists_perception_researchers_and_history_of_science_historians .
+
+ex:Decaláge rdfs:label "Decaláge" ;
+    rel:is ex:the_normal_modal_state_of_affairs .
+
+ex:Each_higher_order_action rdfs:label """Each 
+ higher order action""" ;
+    rel:organizes ex:two_or_more_lower_order_actions .
+
+ex:Each_task_difficulty rdfs:label "Each task difficulty" ;
+    rel:has ex:an_order_of_hierarchical_complexity_required_to_complete_it_correctly .
+
+ex:Empirical_Research_Using_the_Model_of_Hierarchical_Complexity_The_MHC rdfs:label """Empirical Research Using the 
+ Model of Hierarchical Complexity 
+ The MHC""" ;
+    rel:has ex:a_broad_range_of_applicability .
+
+ex:End_result rdfs:label """End result 
+
+""" ;
+    rel:Follows ex:short_sequential_acts_Generalize_match_dependent_task_actions .
+
+ex:End_result_2_Form_open_ended_classes_Reach_touch_grab_shake_objects_babble_Open_ended_classes rdfs:label """End result 
+
+ 2 
+
+ Form open - ended classes 
+
+ Reach , touch , grab , shake objects , babble 
+
+ Open ended classes ,""" ;
+    rel:phonemes ex:3_circular_sensorymotor_sensory_motor_Form_concepts_Respond ;
+    rel:phonemes_to ex:stimuli_in_a_class_successfully_Morphemes .
+
+ex:End_result_2_Form_open_ended_classes_Reach_touch_grab_shake_objects_babble_Open_ended_classes_phonemes_3_circular_sensorymotor_sensory_motor_Form_concepts_Respond_to_stimuli_in_a_class_successfully_Morphemes_concepts_4_nominal_None_Move_limbs_lips_eyes_head_View rdfs:label """End result 
+
+ 2 
+
+ Form open - ended classes 
+
+ Reach , touch , grab , shake objects , babble 
+
+ Open ended classes , phonemes 
+
+ 3 
+
+ circular sensorymotor 
+ sensory - motor 
+
+ Form concepts 
+
+ Respond to stimuli in a class successfully 
+
+ Morphemes , concepts 
+
+ 4 
+
+ nominal 
+
+ None 
+
+ Move limbs , lips , eyes , head View""" ;
+    rel:objects ex:Discriminative_and_condition_stimuli .
+
+ex:Every_task rdfs:label "Every task" ;
+    rel:contains ex:a_multitude_of_subtasks_Overton_1990 .
+
+ex:Few_individuals rdfs:label "Few individuals" ;
+    rel:perform_at ex:stages_above_formal_operations .
+
+ex:Form_variables_out_of_finite_classes rdfs:label "Form variables out of finite classes" ;
+    rel:Make ex:type .
+
+ex:Higher_order_of_complexity_actions rdfs:label "Higher order of complexity actions" ;
+    rel:organize ex:those_lower_order_actions_in_an_non_arbitrary_way .
+
+ex:Horizontal_Classical_Information_Complexity_Tasks_One_major_basis_for_this_developmental_theory rdfs:label """Horizontal ( Classical Information ) Complexity 
+
+ Tasks 
+ One major basis for this developmental theory""" ;
+    rel:is ex:task_analysis .
+
+ex:Informed_Consent rdfs:label "Informed Consent :" ;
+    rel:Know ex:It .
+
+ex:Logic rdfs:label "Logic" ;
+    rel:is ex:linear .
+
+ex:MHC rdfs:label "MHC" ;
+    rel:stages ex:4_through_5_correspond_to_Piaget_s_pre_operational_stage ;
+    rel:stages_to ex:his_concrete_operational_stage,
+        ex:his_formal_operational_stage .
+
+ex:MHC_stages rdfs:label "MHC stages" ;
+    rel:conceptualized_in ex:terms_of_mental_representations,
+        ex:terms_of_the_hierarchical_complexity_of_tasks .
+
+ex:Manuscript rdfs:label "Manuscript" ;
+    rel:submitted_for ex:publication .
+
+ex:Michael_Lamport_Commons_Harvard_Medical_School_The_Model_of_Hierarchical_Complexity rdfs:label """Michael Lamport Commons 
+ Harvard Medical School 
+ The Model of Hierarchical Complexity""" ;
+    rel:presents ex:a_framework_for_scoring_reasoning_stages_in_any_domain_as_well_as_in_any_cross_cultural_setting .
+
+ex:Model_of_Hierarchical_Complexity_The_Model_of_Hierarchical_Complexity_MHC_developed_by_Commons_Commons_Trudeau_Stein_Richards_Krause_1998 rdfs:label """Model of Hierarchical Complexity 
+ The Model of Hierarchical Complexity ( MHC ) developed by 
+ Commons ( Commons , Trudeau , Stein , Richards , & Krause , 1998 ) 
+""" ;
+    rel:quantifies ex:the_order_of_hierarchical_complexity_of_a_task_based_on_mathematical_principles_of_how_the_information_is_organized_Coombs_Dawes_Tversky_1970 ;
+    rel:quantifies_of ex:information_science_Commons_Richards_1984a_1984b .
+
+ex:More_complex_behaviors rdfs:label "More complex behaviors" ;
+    rel:characterize ex:multiple_system_models_Kallio_1995_Kallio_Helkama_1991 .
+
+ex:Name_properties_of_systems rdfs:label """Name 
+ properties of systems :""" ;
+    rel:formed ex:14_cross_paradigmatic_Fit_paradigms_together_to_form .
+
+ex:One rdfs:label "One" ;
+    rel:ask ex:them ;
+    rel:examines ex:behavior ;
+    rel:examines_with ex:respect_to_the_analytically_known_complexity_of_the_task .
+
+ex:Other_advantages_of_this_model rdfs:label "Other advantages of this model" ;
+    rel:include ex:its_avoidance_of_mentalistic_or_contextual_explanations_as_well_as_its_use_of_purely_quantitative_principles_which_are_universally_applicable_in_any_context .
+
+ex:Paper rdfs:label "Paper" ;
+    rel:presented_at ex:the_Annual_Conference_of_the_American_Educational_Research_Association,
+        ex:the_International_Objective_Measurement_Workshop,
+        ex:the_Jean_Piaget_Society .
+
+ex:Performance_stage rdfs:label "Performance stage" ;
+    rel:is ex:different_task_area ;
+    rel:is_to ex:task_area .
+
+ex:Stage rdfs:label "Stage" ;
+    rel:defined_as ex:the_most_hierarchically_complex_task_solved .
+
+ex:Stages rdfs:label """Stages 
+""" ;
+    rel:described_in ex:the_Model_of_Hierarchical_Complexity_Order_or_Stage ;
+    rel:is ex:fundamental ;
+    rel:is_in ex:the_description_of_human_organism_and_machine_evolution .
+
+ex:Table_1 rdfs:label "Table 1" ;
+    rel:gives ex:descriptions_of_each_stage .
+
+ex:Table_2 rdfs:label "Table 2" ;
+    rel:shows ex:the_large_range_of_domains_to_which_the_model_has_been_applied .
+
+ex:Tasks rdfs:label "Tasks" ;
+    rel:are ex:quantal_in_nature ;
+    rel:defined_as ex:sequences_of_contingencies ;
+    rel:vary_in ex:complexity,
+        ex:two_ways .
+
+ex:The_MHC rdfs:label "The MHC" ;
+    rel:offers ex:a_singular_mathematical_method_of_measuring_stages_in_any_domain_because_the_tasks_presented .
+
+ex:The_Model_of_Hierarchical_Complexity rdfs:label """The Model of 
+ Hierarchical Complexity""" ;
+    rel:separates ex:the_task_or_stimulus_from_the_performance .
+
+ex:The_distributive_act rdfs:label "The distributive act" ;
+    rel:is ex:one_order_more_hierarchically_complex_than_the_acts_of_adding_and_multiplying_alone .
+
+ex:The_model rdfs:label "The model" ;
+    rel:allows_for ex:a_standard_quantitative_analysis_of_developmental_complexity_in_any_cultural_setting ;
+    rel:is ex:different_from_previous_proposals_about_developmental_stage_e_g_Inhelder_Piaget_1958 .
+
+ex:The_notion_of_stages rdfs:label "The notion of stages" ;
+    rel:is ex:fundamental ;
+    rel:is_in ex:the_description_of_human_organism_and_machine_evolution .
+
+ex:The_orders_of_hierarchical_complexity rdfs:label "The orders of hierarchical complexity" ;
+    rel:stepped_like ex:the_rings_around_the_nucleus .
+
+ex:The_participant_s_performance_on_a_task_of_a_given_complexity rdfs:label """The participant ’s 
+ performance on a task of a given complexity""" ;
+    rel:represents ex:the_stage_of_developmental_complexity .
+
+ex:The_quantal_feature_of_tasks rdfs:label """The quantal 
+ feature of tasks""" ;
+    rel:is ex:particularly_instrumental_in_stage_assessment .
+
+ex:The_scoring rdfs:label "The scoring" ;
+    rel:based_upon ex:the_content_or_the_participant_material .
+
+ex:The_sentential_stage rdfs:label """The sentential 
+ stage""" ;
+    rel:added_at ex:Fischer_s_suggestion_1981_personal_communication .
+
+ex:The_sequence rdfs:label "The sequence" ;
+    rel:is ex:metasystematic_13_paradigmatic_and_14_cross_paradigmatic .
+
+ex:The_study_of_ideal_tasks_including_their_instantiation_in_the_real_world rdfs:label """The study of ideal tasks , including their instantiation in 
+ the real world ,""" ;
+    rel:been ex:the_basis_of_the_branch_of_stimulus_control_called_Psychophysics .
+
+ex:The_three_highest_stages_in_the_MHC rdfs:label "The three highest stages in the MHC" ;
+    rel:represented_in ex:Piaget_s_model .
+
+ex:They rdfs:label "They" ;
+    rel:use ex:formal_operations ;
+    rel:use_within ex:a_higher_system_of_operations .
+
+ex:This rdfs:label "This" ;
+    rel:forces ex:the_hierarchical_nature_of_the_relations ;
+    rel:is_in ex:agreement_with_previous_definitions_Commons_et_al_1998 .
+
+ex:This_paper rdfs:label "This paper" ;
+    rel:presents ex:an_elaboration_of_the_concepts_underlying_the_Model_of_Hierarchical_Complexity_MHC .
+
+ex:This_short_introduction_to_the_special_issue rdfs:label "This short introduction to the special issue" ;
+    rel:describe ex:this_model ;
+    rel:describe_in ex:some_detail .
+
+ex:This_special_issue rdfs:label "This special issue" ;
+    rel:presents ex:a_collection_of_papers_based_on_the_Model_of_Hierarchical_Complexity_a_non_mentalistic_model_of_developmental_stages .
+
+ex:Vertical_Hierarchical_Complexity_Hierarchical_complexity rdfs:label """Vertical ( Hierarchical ) Complexity 
+ Hierarchical complexity""" ;
+    rel:refers_to ex:the_number_of_recursions_that_the_coordinating_actions_must_perform_on_a_set_of_primary_elements .
+
+ex:You rdfs:label "You" ;
+    rel:Know ex:It .
+
+ex:a_description_of_how_processes_of_acquisition_of_new_skills_differ_across_developmental_stages rdfs:label """a 
+ description of how processes of acquisition of new skills differ 
+ across developmental stages""" ;
+    rel:are_in ex:terms_of_what_outcomes_might_result_from_negative_abusive_or_traumatic_early_experiences_b_the_development_of_game_playing_and_social_interaction_skills_in_infants_c .
+
+ex:a_penny rdfs:label "a penny" ;
+    rel:came ex:heads .
+
+ex:adults rdfs:label "adults" ;
+    rel:using ex:forms_of_reasoning_that_are_more_complex_than_formal_operations_with_which_Piaget_s_model_ended .
+
+ex:all_tasks rdfs:label "all tasks" ;
+    rel:fit_in ex:some_sequence_of_tasks .
+
+ex:both_one rdfs:label "both one" ;
+    rel:finds ex:1 .
+
+ex:e_g_homomorphic_isomorphic_complete_consistent_commensurable_Synthesize_metasystems_Paradigms rdfs:label """e.g. homomorphic , 
+ isomorphic , complete , consistent , commensurable 
+ Synthesize metasystems 
+ Paradigms""" ;
+    rel:formed ex:14_cross_paradigmatic_Fit_paradigms_together_to_form .
+
+ex:each rdfs:label "each" ;
+    rel:presenting ex:stimuli_and_each_requiring_a_behavior_or_a_sequence_of_behaviors_that_must_occur_in_some_non_arbitrary_fashion .
+
+ex:each_additional_1_bit_question rdfs:label """each additional 
+ 1 - bit question""" ;
+    rel:add ex:another_bit .
+
+ex:each_of_Piaget_s_substages rdfs:label "each of Piaget ’s substages" ;
+    rel:are ex:hard_stages ;
+    rel:are_in ex:fact .
+
+ex:each_of_the_papers_to_follow rdfs:label """each of the papers to follow 
+""" ;
+    rel:rely_on ex:it .
+
+ex:hierarchical_complexity rdfs:label """hierarchical 
+ complexity""" ;
+    rel:refers_to ex:the_mathematical_complexity_of_the_task_Classical_information .
+
+ex:one rdfs:label "one" ;
+    rel:asked ex:a_person_across_the_room ;
+    rel:asked_For ex:example ;
+    rel:does_in ex:a_game ;
+    rel:does_with ex:dice .
+
+ex:outcomes rdfs:label "outcomes" ;
+    rel:result ex:what ;
+    rel:result_from ex:negative_abusive_or_traumatic_early_experiences_b_the_development_of_game_playing_and_social_interaction_skills_in_infants_c .
+
+ex:previous_theories_of_stage rdfs:label "previous theories of stage" ;
+    rel:confounded ex:the_stimulus_and_response_in_assessing_stage ;
+    rel:confounded_by ex:simply_scoring_responses .
+
+ex:processes_of_acquisition_of_new_skills rdfs:label "processes of acquisition of new skills" ;
+    rel:differ_across ex:developmental_stages .
+
+ex:products_of_simple_operations rdfs:label """products of simple operations 
+""" ;
+    rel:Tell ex:7_primary_Simple_logical_deduction_and_empirical_rules_involving_time_sequence_Simple_arithmetic_Adds_subtracts_multiplies_divides_counts_Times_places,
+        ex:stories .
+
+ex:relations_among_concepts rdfs:label "relations among concepts" ;
+    rel:Use ex:names_and_other_words ;
+    rel:Use_as ex:successful_Use_names .
+
+ex:researchers rdfs:label "researchers" ;
+    rel:help ex:writers .
+
+ex:simple_deductions rdfs:label """simple deductions 
+""" ;
+    rel:Count ex:random_events .
+
+ex:task_sequences rdfs:label "task sequences" ;
+    rel:form ex:hierarchies_that_become_increasingly_complex .
+
+ex:that rdfs:label "that" ;
+    rel:are ex:different,
+        ex:more_complex_than_formal_operations_with_which_Piaget_s_model_ended,
+        ex:new_and_not_arbitrary ;
+    rel:become ex:increasingly_complex ;
+    rel:complete ex:the_given_task ;
+    rel:occur_in ex:some_non_arbitrary_fashion ;
+    rel:organized_into ex:13_Spring_2007,
+        ex:Vol,
+        ex:_blank ;
+    rel:researched_to ex:this_point .
+
+ex:the_Model rdfs:label "the Model" ;
+    rel:characterizes ex:all_stages,
+        ex:as_hard_and_distinct ;
+    rel:characterizes_For ex:this_reason .
+
+ex:the_Model_of_Hierarchical_Complexity_a_the_development_of_attachment_both_in_terms_of_what_are_the_expected_normative_developments_and_in_terms_of_what_outcomes_might_result_from_negative_abusive_or_traumatic_early_experiences_b_the_development_of_game_playing_and_social_interaction_skills_in_infants_c_a_description_of_how_processes_of_acquisition_of_new_skills_differ_across_developmental_stages_d_an_application_of_the_model_to_teaching_and_teacher_behavior_e_an_explanation_of_the_influence_of_hierarchical_complexity_within_organizations_and_f_a_comparison_of_two_different_models_of_complexity_showing_how_each_can_be_used_to_assess_college_students_behavior rdfs:label """the Model of Hierarchical Complexity ( a ) the development of attachment , both in terms of what are the expected , normative 
+ developments and in terms of what outcomes might result from 
+ negative , abusive or traumatic early experiences , ( b ) the development of game playing and social interaction skills in infants , ( c ) a 
+ description of how processes of acquisition of new skills differ 
+ across developmental stages , ( d ) an application of the model to 
+ teaching and teacher behavior , ( e ) an explanation of the influence 
+ of hierarchical complexity within organizations , and ( f ) a comparison of two different models of complexity , showing how each 
+ can be used to assess college students ’ behavior""" ;
+    rel:applied_to ex:a_variety_of_domains .
+
+ex:the_coordinating_actions rdfs:label "the coordinating actions" ;
+    rel:perform_on ex:a_set_of_primary_elements .
+
+ex:the_correlation rdfs:label "the correlation" ;
+    rel:being ex:r_92 .
+
+ex:the_expected_normative_developments rdfs:label """the expected , normative 
+ developments""" ;
+    rel:are_in ex:terms_of_what_outcomes_might_result_from_negative_abusive_or_traumatic_early_experiences_b_the_development_of_game_playing_and_social_interaction_skills_in_infants_c .
+
+ex:the_face rdfs:label "the face" ;
+    rel:had ex:an_even_number .
+
+ex:the_highest_stage rdfs:label "the highest stage" ;
+    rel:represents ex:successful_performances_on_the_most_hierarchically_complex_tasks_rather_than_intellectual_maturity .
+
+ex:the_information rdfs:label "the information" ;
+    rel:organized ex:Coombs_Dawes_Tversky_1970 .
+
+ex:the_lower_ones_Higher_order_of_complexity_actions rdfs:label """the lower ones 
+ Higher order of complexity actions""" ;
+    rel:organize ex:those_lower_order_actions .
+
+ex:the_model rdfs:label """the model 
+""" ;
+    rel:applied_to ex:which .
+
+ex:the_model_of_hierarchical_complexity rdfs:label "the model of hierarchical complexity" ;
+    rel:applied_in ex:a_very_large_range_of_domains .
+
+ex:the_notion_of_stage rdfs:label "the notion of stage" ;
+    rel:is ex:discontinuous .
+
+ex:the_order_of_complexity_of_the_task_Behavioral_Development_Bulletin_2_stage_S_A_max_h_A rdfs:label """the order of complexity of 
+ the task Behavioral Development Bulletin 
+
+ 2 
+
+ stage(S , A ) = max{h(A )""" ;
+    rel:determined ex:_blank .
+
+ex:the_organization rdfs:label "the organization" ;
+    rel:meet ex:real_world_requirements_including_the_empirical_and_analytic .
+
+ex:the_scores_obtained_for_stages rdfs:label "the scores obtained for stages" ;
+    rel:are ex:discrete .
+
+ex:the_stage_of_performance_of_S_on_A rdfs:label """the stage 
+ of performance of S on A""" ;
+    rel:is ex:the_highest_order_of_the_actions_in_A_completed_successfully_at_least_once ;
+    rel:is_Given ex:a_collection_of_actions_A_and_a_participant_S_performing_A .
+
+ex:the_stage_of_the_participant_s_performance rdfs:label """the 
+ stage of the participant ’s performance""" ;
+    rel:is ex:equivalent_to_the_order_of_complexity_of_the_successfully_completed_task ;
+    rel:is_Since ex:tasks_of_a_given_order_of_hierarchical_complexity_require_actions_of_a_given_order_of_hierarchical_complexity_to_perform_them .
+
+ex:the_subtasks rdfs:label "the subtasks" ;
+    rel:carried_in ex:a_required_order .
+
+ex:therapists_and_anthropologists rdfs:label "therapists , and anthropologists" ;
+    rel:use ex:the_MHC .
+
+ex:these rdfs:label "these" ;
+    rel:are ex:ways_in_which_these_theories_argue_for_and_present_converging_evidence_that_adults_are_using_forms_of_reasoning_that_are_more_complex_than_formal_operations_with_which_Piaget_s_model_ended ;
+    rel:are_In ex:any_case .
+
+ex:these_theories rdfs:label "these theories" ;
+    rel:argue ex:present_converging_evidence_that_adults_are_using_forms_of_reasoning_that_are_more_complex_than_formal_operations_with_which_Piaget_s_model_ended ;
+    rel:argue_in ex:which .
+
+ex:they rdfs:label """they 
+""" ;
+    rel:do ex:What,
+        ex:it ;
+    rel:flipped ex:it ;
+    rel:had ex:a_fourfaced_top_with_the_faces_numbered_1 ;
+    rel:tossed ex:it ;
+    rel:tossed_against ex:a_backboard .
+
+ex:this rdfs:label "this" ;
+    rel:accounts_for ex:the_developmental_changes_seen .
+
+ex:two rdfs:label "two" ;
+    rel:operates_on ex:a_task_of_order_one_a_simple_task .
+
+ex:us rdfs:label "us" ;
+    rel:turn_to ex:a_simple_example .
+
+ex:we rdfs:label "we" ;
+    rel:describe ex:it ;
+    rel:describe_in ex:terms_of_the_model_of_hierarchical_complexity ;
+    rel:wish_To ex:A,
+        ex:each_action .
+
+ex:who rdfs:label "who" ;
+    rel:display ex:a_greater_freedom_of_mental_functioning .
+
+ex:words_linear_logical_one_dimensional_if_then_thus_therefore_because_correct_scientific_solutions_11_systematic_Construct_multivariate_systems_and_matrices_Coordinates_more_than_one_variable_as_input_Events_and_concepts_situated_in_a_Consider_relationships_in_contexts_multivariate_context_systems_are_formed_out_of_relations_systems_legal_societal_corporate_economic_national_12_metasystematic_Construct_multi_systems_and_metasystems_out_of_disparate_systems_13_paradigmatic_Fit_metasystems_together_to_form rdfs:label """; words : linear , logical , one 
+ dimensional , if then , thus , therefore , 
+ because ; correct scientific solutions 
+
+ 11 
+
+ systematic 
+
+ Construct multivariate 
+ systems and matrices 
+
+ Coordinates more than one variable as input Events and concepts situated in a 
+ Consider relationships in contexts 
+ multivariate context ; systems are 
+ formed out of relations ; systems : legal , 
+ societal , corporate , economic , national 
+
+ 12 
+
+ metasystematic 
+
+ Construct multi - systems and 
+ metasystems out of disparate 
+ systems 
+
+ 13 
+
+ paradigmatic 
+
+ Fit metasystems together to 
+ form""" ;
+    rel:Create ex:metasystems .
+
+ex:1 rdfs:label "1" .
+
+ex:13_Spring_2007 rdfs:label ". 13 , Spring 2007" .
+
+ex:1_bit_of_horizontal_information rdfs:label "1 bit of “ horizontal ” information" .
+
+ex:3 rdfs:label "3" .
+
+ex:3_circular_sensorymotor_sensory_motor_Form_concepts_Respond rdfs:label """3 
+
+ circular sensorymotor 
+ sensory - motor 
+
+ Form concepts 
+
+ Respond""" .
+
+ex:4_through_5_correspond_to_Piaget_s_pre_operational_stage rdfs:label """4 through 5 correspond to Piaget ’s 
+ pre - operational stage""" .
+
+ex:7_primary_Simple_logical_deduction_and_empirical_rules_involving_time_sequence_Simple_arithmetic_Adds_subtracts_multiplies_divides_counts_Times_places rdfs:label """7 
+
+ primary 
+
+ Simple logical deduction and 
+ empirical rules involving time 
+ sequence Simple arithmetic 
+
+ Adds , subtracts , multiplies , divides , counts , Times , places ,""" .
+
+ex:A rdfs:label "A" .
+
+ex:Coombs_Dawes_Tversky_1970 rdfs:label "( Coombs , Dawes , & Tversky , 1970 )" .
+
+ex:Discriminative_and_condition_stimuli rdfs:label """Discriminative and condition stimuli 
+""" .
+
+ex:Fischer_s_suggestion_1981_personal_communication rdfs:label "Fischer ’s suggestion ( 1981 , personal communication )" .
+
+ex:Piaget_s_model rdfs:label "Piaget ’s model" ;
+    rel:ended ex:which .
+
+ex:Vol rdfs:label "Vol" .
+
+ex:What rdfs:label "What" .
+
+ex:a_2_Horizontal_complexity rdfs:label "a 2 . Horizontal complexity" .
+
+ex:a_backboard rdfs:label "a backboard" .
+
+ex:a_broad_range_of_applicability rdfs:label "a broad range of applicability" .
+
+ex:a_collection_of_actions_A_and_a_participant_S_performing_A rdfs:label """a 
+ collection of actions A and a participant S performing A""" .
+
+ex:a_collection_of_papers_based_on_the_Model_of_Hierarchical_Complexity_a_non_mentalistic_model_of_developmental_stages rdfs:label """a collection of papers based on 
+ the Model of Hierarchical Complexity , a non - mentalistic model of 
+ developmental stages""" .
+
+ex:a_fourfaced_top_with_the_faces_numbered_1 rdfs:label "a fourfaced top with the faces numbered 1 ," .
+
+ex:a_framework_for_scoring_reasoning_stages_in_any_domain_as_well_as_in_any_cross_cultural_setting rdfs:label """a framework for 
+ scoring reasoning stages in any domain as well as in any cross 
+ cultural setting""" .
+
+ex:a_game rdfs:label "a game" .
+
+ex:a_greater_freedom_of_mental_functioning rdfs:label """a greater 
+ freedom of mental functioning""" .
+
+ex:a_higher_system_of_operations rdfs:label """a “ higher ” system 
+ of operations""" .
+
+ex:a_multitude_of_subtasks_Overton_1990 rdfs:label "a multitude of subtasks ( Overton , 1990" .
+
+ex:a_number_of_the_studies rdfs:label "a number of the studies" .
+
+ex:a_person_across_the_room rdfs:label """a person 
+ across the room""" .
+
+ex:a_required_order rdfs:label """a required 
+ order""" .
+
+ex:a_rote_fashion rdfs:label "a rote fashion" .
+
+ex:a_set_of_primary_elements rdfs:label """a set of primary 
+ elements""" .
+
+ex:a_simple_example rdfs:label "a simple example" .
+
+ex:a_singular_mathematical_method_of_measuring_stages_in_any_domain_because_the_tasks_presented rdfs:label """a singular mathematical method of 
+ measuring stages in any domain because the tasks presented""" .
+
+ex:a_standard_quantitative_analysis_of_developmental_complexity_in_any_cultural_setting rdfs:label """a 
+ standard quantitative analysis of developmental complexity in any 
+ cultural setting""" .
+
+ex:a_task_of_order_one_a_simple_task rdfs:label "a task of order one ( a simple task" .
+
+ex:a_task_of_order_two_and rdfs:label "a task of order two and" .
+
+ex:a_task_of_order_two_operates_on_a_task_of_order_one_a_simple_task rdfs:label """a task of order two operates on 
+ a task of order one ( a simple task )""" .
+
+ex:a_variety_of_domains rdfs:label "a variety of domains" .
+
+ex:a_very_large_range_of_domains rdfs:label "a very large range of domains" .
+
+ex:agreement_with_previous_definitions_Commons_et_al_1998 rdfs:label """agreement with 
+ previous definitions ( Commons et al . , 1998""" .
+
+ex:all_stages rdfs:label "all stages" .
+
+ex:an_elaboration_of_the_concepts_underlying_the_Model_of_Hierarchical_Complexity_MHC rdfs:label """an elaboration 
+ of the concepts underlying the Model of Hierarchical Complexity 
+ ( MHC""" .
+
+ex:an_even_number rdfs:label "an even number" .
+
+ex:an_order_of_hierarchical_complexity_3 rdfs:label """an order of hierarchical complexity 
+ 3""" .
+
+ex:an_order_of_hierarchical_complexity_required_to_complete_it_correctly rdfs:label """an order of 
+ hierarchical complexity required to complete it correctly""" .
+
+ex:another_bit rdfs:label "another bit" .
+
+ex:any_case rdfs:label "any case" .
+
+ex:any_of_the_subsequent_stages rdfs:label """any of the 
+ subsequent stages""" .
+
+ex:as_hard_and_distinct rdfs:label """as hard and 
+ distinct""" .
+
+ex:atic_and_metasystematic_reasoning rdfs:label "atic and metasystematic reasoning" .
+
+ex:behavior rdfs:label """behavior 
+""" .
+
+ex:complexity rdfs:label "complexity" .
+
+ex:descriptions_of_each_stage rdfs:label """descriptions 
+ of each stage""" .
+
+ex:developmental_stages rdfs:label "developmental stages" .
+
+ex:dice rdfs:label "dice" .
+
+ex:different rdfs:label "different" .
+
+ex:different_from_previous_proposals_about_developmental_stage_e_g_Inhelder_Piaget_1958 rdfs:label """different from previous 
+ proposals about developmental stage ( e.g. , Inhelder & Piaget , 
+ 1958 )""" .
+
+ex:different_task_area rdfs:label "different task area" .
+
+ex:discontinuous rdfs:label "discontinuous" .
+
+ex:discrete rdfs:label "discrete" .
+
+ex:each_action rdfs:label "each action" .
+
+ex:equivalent_to_the_order_of_complexity_of_the_successfully_completed_task rdfs:label """equivalent to the order of 
+ complexity of the successfully completed task""" .
+
+ex:example rdfs:label "example" .
+
+ex:fact rdfs:label "fact" .
+
+ex:formal_operations rdfs:label "formal operations" .
+
+ex:forms_of_reasoning_that_are_more_complex_than_formal_operations_with_which_Piaget_s_model_ended rdfs:label """forms of 
+ reasoning that are more complex than formal operations with 
+ which Piaget ’s model ended""" .
+
+ex:hard_stages rdfs:label "hard stages" .
+
+ex:heads rdfs:label "heads" ;
+    rel:transmit ex:1_bit_of_horizontal_information .
+
+ex:hierarchies_that_become_increasingly_complex rdfs:label """hierarchies that become 
+ increasingly complex""" .
+
+ex:his_concrete_operational_stage rdfs:label """his concrete 
+ operational stage""" .
+
+ex:his_formal_operational_stage rdfs:label """his formal 
+ operational stage""" .
+
+ex:includes rdfs:label """includes : 
+""" .
+
+ex:inconsistency_in_thinking_within_a_developmental_stage rdfs:label """inconsistency in thinking within a 
+ developmental stage""" .
+
+ex:increasingly_complex rdfs:label "increasingly complex" .
+
+ex:information_science_Commons_Richards_1984a_1984b rdfs:label """information science 
+ ( Commons & Richards , 1984a , 1984b""" .
+
+ex:its_avoidance_of_mentalistic_or_contextual_explanations_as_well_as_its_use_of_purely_quantitative_principles_which_are_universally_applicable_in_any_context rdfs:label """its 
+ avoidance of mentalistic or contextual explanations , as well as its 
+ use of purely quantitative principles which are universally 
+ applicable in any context""" .
+
+ex:linear rdfs:label "linear" .
+
+ex:metasystematic_13_paradigmatic_and_14_cross_paradigmatic rdfs:label "metasystematic , ( 13 ) paradigmatic , and ( 14 ) cross - paradigmatic" .
+
+ex:metasystems rdfs:label "metasystems" .
+
+ex:more_complex_than_formal_operations_with_which_Piaget_s_model_ended rdfs:label """more complex than formal operations with 
+ which Piaget ’s model ended""" .
+
+ex:multiple_system_models_Kallio_1995_Kallio_Helkama_1991 rdfs:label """multiple system 
+ models ( Kallio , 1995 ; Kallio & Helkama , 1991 )""" .
+
+ex:names_and_other_words rdfs:label "names and other words" .
+
+ex:negative_abusive_or_traumatic_early_experiences_b_the_development_of_game_playing_and_social_interaction_skills_in_infants_c rdfs:label "negative , abusive or traumatic early experiences , ( b ) the development of game playing and social interaction skills in infants , ( c )" .
+
+ex:new_and_not_arbitrary rdfs:label "new and not arbitrary" .
+
+ex:one_order_more_hierarchically_complex_than_the_acts_of_adding_and_multiplying_alone rdfs:label """one order more hierarchically complex than the acts of 
+ adding and multiplying alone""" .
+
+ex:particularly_instrumental_in_stage_assessment rdfs:label "particularly instrumental in stage assessment" .
+
+ex:present_converging_evidence_that_adults_are_using_forms_of_reasoning_that_are_more_complex_than_formal_operations_with_which_Piaget_s_model_ended rdfs:label """present converging evidence that adults are using forms of 
+ reasoning that are more complex than formal operations with 
+ which Piaget ’s model ended""" .
+
+ex:problem_solving_or_to_cognition rdfs:label """problem solving , 
+ or to cognition""" .
+
+ex:program_manipulate_0 rdfs:label "program manipulate 0" .
+
+ex:publication rdfs:label "publication" .
+
+ex:quantal_in_nature rdfs:label "quantal in nature" .
+
+ex:r_92 rdfs:label "r = .92" .
+
+ex:random_events rdfs:label "random events" .
+
+ex:real_world_requirements_including_the_empirical_and_analytic rdfs:label """real world 
+ requirements , including the empirical and analytic""" .
+
+ex:respect_to_the_analytically_known_complexity_of_the_task rdfs:label "respect to the analytically known complexity of the task" .
+
+ex:sequences_of_contingencies rdfs:label "sequences of contingencies" .
+
+ex:simply_scoring_responses rdfs:label """simply scoring 
+ responses""" .
+
+ex:some_ad_hoc_ways rdfs:label "some ad hoc ways" .
+
+ex:some_detail rdfs:label "some detail" .
+
+ex:some_non_arbitrary_fashion rdfs:label """some non - arbitrary 
+ fashion""" .
+
+ex:some_sequence_of_tasks rdfs:label "some sequence of tasks" .
+
+ex:stage_changes rdfs:label """stage 
+ changes""" .
+
+ex:stages_above_formal_operations rdfs:label """stages above formal 
+ operations""" .
+
+ex:stimuli_and_each_requiring_a_behavior_or_a_sequence_of_behaviors_that_must_occur_in_some_non_arbitrary_fashion rdfs:label """stimuli and each requiring a behavior or a 
+ sequence of behaviors that must occur in some non - arbitrary 
+ fashion""" .
+
+ex:stimuli_generalization rdfs:label "stimuli generalization" .
+
+ex:stimuli_in_a_class_successfully_Morphemes rdfs:label """stimuli in a class successfully 
+
+ Morphemes""" .
+
+ex:stories rdfs:label """stories 
+
+""" .
+
+ex:successful_Use_names rdfs:label """successful 
+ Use names 
+""" .
+
+ex:successful_performances_on_the_most_hierarchically_complex_tasks_rather_than_intellectual_maturity rdfs:label """successful performances on the most hierarchically complex 
+ tasks rather than intellectual maturity""" .
+
+ex:task_analysis rdfs:label """task 
+ analysis""" .
+
+ex:task_area rdfs:label "task area" .
+
+ex:tasks_of_a_given_order_of_hierarchical_complexity_require_actions_of_a_given_order_of_hierarchical_complexity_to_perform_them rdfs:label """tasks of a given order of hierarchical complexity require actions of 
+ a given order of hierarchical complexity to perform them""" .
+
+ex:terms_of_actions_at_the_next_lower_order_of_hierarchical_complexity rdfs:label "terms of actions at the next lower order of hierarchical complexity" .
+
+ex:terms_of_mental_representations rdfs:label """terms of mental 
+ representations""" .
+
+ex:terms_of_the_hierarchical_complexity_of_tasks rdfs:label """terms of the 
+ hierarchical complexity of tasks""" .
+
+ex:terms_of_the_model_of_hierarchical_complexity rdfs:label "terms of the model of hierarchical complexity" .
+
+ex:the_Annual_Conference_of_the_American_Educational_Research_Association rdfs:label """the Annual Conference of the 
+ American Educational Research Association ,""" .
+
+ex:the_International_Objective_Measurement_Workshop rdfs:label "the International Objective Measurement Workshop" .
+
+ex:the_Jean_Piaget_Society rdfs:label "the Jean Piaget Society" .
+
+ex:the_MHC rdfs:label "the MHC" .
+
+ex:the_Model_of_Hierarchical_Complexity_Order_or_Stage rdfs:label """the Model of Hierarchical Complexity 
+ Order or Stage 
+
+""" .
+
+ex:the_basis_of_the_branch_of_stimulus_control_called_Psychophysics rdfs:label """the basis of the branch of stimulus control 
+ called Psychophysics""" .
+
+ex:the_content_or_the_participant_material rdfs:label """the content or the 
+ participant material""" .
+
+ex:the_developmental_changes_seen rdfs:label "the developmental changes seen" .
+
+ex:the_given_task rdfs:label """the 
+ given task""" .
+
+ex:the_hierarchical_nature_of_the_relations rdfs:label """the hierarchical nature of the relations 
+""" .
+
+ex:the_highest_order_of_the_actions_in_A_completed_successfully_at_least_once rdfs:label """the highest order of the actions in A 
+ completed successfully at least once""" .
+
+ex:the_large_range_of_domains_to_which_the_model_has_been_applied rdfs:label """the large range of domains to which the model 
+ has been applied""" .
+
+ex:the_mathematical_complexity_of_the_task_Classical_information rdfs:label """the mathematical complexity of the task 
+
+ Classical information""" .
+
+ex:the_most_hierarchically_complex_task_solved rdfs:label """the most hierarchically complex task 
+ solved""" .
+
+ex:the_normal_modal_state_of_affairs rdfs:label """the normal modal state of 
+ affairs""" .
+
+ex:the_number_of_recursions_that_the_coordinating_actions_must_perform_on_a_set_of_primary_elements rdfs:label """the number of recursions 
+ that the coordinating actions must perform on a set of primary 
+ elements""" .
+
+ex:the_order_of_hierarchical_complexity_of_a_task_based_on_mathematical_principles_of_how_the_information_is_organized_Coombs_Dawes_Tversky_1970 rdfs:label """the order of hierarchical complexity of a task based on 
+ mathematical principles of how the information is organized 
+ ( Coombs , Dawes , & Tversky , 1970 ) ,""" .
+
+ex:the_rings_around_the_nucleus rdfs:label "the rings around the nucleus" .
+
+ex:the_singular_proper_sequence_of_the_simpler_actions rdfs:label """the singular proper 
+ sequence of the simpler actions""" .
+
+ex:the_stage_of_developmental_complexity rdfs:label """the stage 
+ of developmental complexity""" .
+
+ex:the_stimulus_and_response_in_assessing_stage rdfs:label """the 
+ stimulus and response in assessing stage""" .
+
+ex:the_task_or_stimulus_from_the_performance rdfs:label """the task or stimulus from the 
+ performance""" .
+
+ex:them rdfs:label """them 
+""" .
+
+ex:theorists_perception_researchers_and_history_of_science_historians rdfs:label """theorists , perception researchers , and history of science 
+ historians""" .
+
+ex:this_model rdfs:label "this model" .
+
+ex:this_point rdfs:label "this point" .
+
+ex:this_reason rdfs:label "this reason" .
+
+ex:those_lower_order_actions rdfs:label """those 
+ lower order actions""" .
+
+ex:those_lower_order_actions_in_an_non_arbitrary_way rdfs:label """those lower 
+ order actions in an non - arbitrary way""" .
+
+ex:three_concatenation_operations rdfs:label "three concatenation operations" .
+
+ex:three_postformal_stages rdfs:label """three 
+ postformal stages""" .
+
+ex:two_or_more_lower_order_actions rdfs:label """two or more lower order 
+ actions""" .
+
+ex:two_ways rdfs:label "two ways" .
+
+ex:type rdfs:label "type" .
+
+ex:universally_applicable_in_any_context rdfs:label """universally 
+ applicable in any context""" .
+
+ex:ways_in_which_these_theories_argue_for_and_present_converging_evidence_that_adults_are_using_forms_of_reasoning_that_are_more_complex_than_formal_operations_with_which_Piaget_s_model_ended rdfs:label """ways in which these theories argue for 
+ and present converging evidence that adults are using forms of 
+ reasoning that are more complex than formal operations with 
+ which Piaget ’s model ended""" .
+
+ex:what rdfs:label "what" ;
+    rel:are_in ex:terms_of_what_outcomes_might_result_from_negative_abusive_or_traumatic_early_experiences_b_the_development_of_game_playing_and_social_interaction_skills_in_infants_c .
+
+ex:writers rdfs:label "writers" .
+
+ex:14_cross_paradigmatic_Fit_paradigms_together_to_form rdfs:label """14 
+
+ cross - paradigmatic Fit paradigms together to 
+ form""" .
+
+ex:It rdfs:label "It" ;
+    rel:is ex:inconsistency_in_thinking_within_a_developmental_stage ;
+    rel:limited_to ex:problem_solving_or_to_cognition .
+
+ex:_blank rdfs:label "_" .
+
+ex:fundamental rdfs:label "fundamental" .
+
+ex:short_sequential_acts_Generalize_match_dependent_task_actions rdfs:label """short sequential acts 
+
+ Generalize match - dependent task actions""" .
+
+ex:the_description_of_human_organism_and_machine_evolution rdfs:label """the description of 
+ human , organism , and machine evolution""" .
+
+ex:terms_of_what_outcomes_might_result_from_negative_abusive_or_traumatic_early_experiences_b_the_development_of_game_playing_and_social_interaction_skills_in_infants_c rdfs:label """terms of what outcomes might result from 
+ negative , abusive or traumatic early experiences , ( b ) the development of game playing and social interaction skills in infants , ( c )""" .
+
+ex:which rdfs:label "which" ;
+    rel:are ex:universally_applicable_in_any_context .
+
+ex:it rdfs:label "it" ;
+    rel:defined_in ex:some_ad_hoc_ways ;
+    rel:indicates ex:the_singular_proper_sequence_of_the_simpler_actions ;
+    rel:were ex:a_2_Horizontal_complexity .
+

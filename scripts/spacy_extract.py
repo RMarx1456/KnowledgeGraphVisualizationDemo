@@ -14,9 +14,11 @@ from pathlib import Path
 import spacy
 
 from rdf_common import emit
+from textload import load_text
 
 METHOD = "spacy"
-VERSION = "v1.1.0"  # v1.1.0: sibling RDF namespaces for clean qname rendering
+VERSION = "v1.2.0"  # v1.2.0: predicates use verbatim surface text, not lemmas
+# v1.1.0: sibling RDF namespaces for clean qname rendering
 
 # Dependency labels that mark the "object" half of a triple.
 OBJECT_DEPS = {
@@ -50,15 +52,18 @@ def extract_triples(doc):
 
             for obj in token.children:
                 if obj.dep_ in OBJECT_DEPS:
-                    predicate = token.lemma_
+                    # Use the verbatim surface form, NOT token.lemma_: lemmatizing
+                    # collapses "is"->"be", "loves"->"love" etc., which imposes an
+                    # unwanted ontological normalization. Preserve the in-text relation.
+                    predicate = token.text
                     obj_text = " ".join(t.text for t in obj.subtree)
                     for subj in subjects:
                         triples.append((subject_phrase(subj), predicate, obj_text))
-                # prepositional phrases: "lives in Italy" -> (X, live_in, Italy)
+                # prepositional phrases: "lives in Italy" -> (X, lives_in, Italy)
                 elif obj.dep_ == "prep":
                     for pobj in obj.children:
                         if pobj.dep_ == "pobj":
-                            predicate = f"{token.lemma_}_{obj.text}"
+                            predicate = f"{token.text}_{obj.text}"
                             obj_text = " ".join(t.text for t in pobj.subtree)
                             for subj in subjects:
                                 triples.append((subject_phrase(subj), predicate, obj_text))
@@ -69,6 +74,6 @@ def run_spacy(path: Path) -> Path:
     """Extract triples from a text file and emit a provenanced Turtle run.
     Returns the path to the written .ttl. Called by the cli.py `extract` command."""
     nlp = spacy.load("en_core_web_sm")
-    doc = nlp(path.read_text(encoding="utf-8"))
+    doc = nlp(load_text(path))
     triples = extract_triples(doc)
     return emit(METHOD, VERSION, path.name, triples)
