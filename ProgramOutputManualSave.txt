@@ -1,0 +1,228 @@
+>python cli.py ask "What does mario love?"
+[mode: retrieval-only]
+
+[retrieval-only — no ANTHROPIC_API_KEY set; this is the context that would be sent to the LLM]
+
+SCHEMA:
+Triples: 730
+
+Prefixes:
+  PREFIX ex: <http://example.org/kg/entity/>
+  PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+  PREFIX rel: <http://example.org/kg/relation/>
+
+Predicates in use:
+  http://example.org/kg/relation/Avoid
+  http://example.org/kg/relation/Charged
+  http://example.org/kg/relation/Charged_for
+  http://example.org/kg/relation/Confirm
+  http://example.org/kg/relation/Count
+  http://example.org/kg/relation/Create
+  http://example.org/kg/relation/Follows
+  http://example.org/kg/relation/Identify
+  http://example.org/kg/relation/Is
+  http://example.org/kg/relation/Know
+  http://example.org/kg/relation/Make
+  http://example.org/kg/relation/Passed_from
+  http://example.org/kg/relation/Passed_with
+  http://example.org/kg/relation/Preserve
+  http://example.org/kg/relation/Receive
+  http://example.org/kg/relation/System
+  http://example.org/kg/relation/Tell
+  http://example.org/kg/relation/Use
+  http://example.org/kg/relation/Use_as
+  http://example.org/kg/relation/accounts_for
+  http://example.org/kg/relation/add
+  http://example.org/kg/relation/added
+  http://example.org/kg/relation/added_at
+  http://example.org/kg/relation/adds
+  http://example.org/kg/relation/advise
+  http://example.org/kg/relation/affects
+  http://example.org/kg/relation/allows_for
+  http://example.org/kg/relation/applied_in
+  http://example.org/kg/relation/applied_to
+  http://example.org/kg/relation/approve
+  http://example.org/kg/relation/are
+  http://example.org/kg/relation/are_In
+  http://example.org/kg/relation/are_in
+  http://example.org/kg/relation/argue
+  http://example.org/kg/relation/argue_in
+  http://example.org/kg/relation/ask
+  http://example.org/kg/relation/asked
+  http://example.org/kg/relation/asked_For
+  http://example.org/kg/relation/authorized
+  http://example.org/kg/relation/avoid
+  http://example.org/kg/relation/based_upon
+  http://example.org/kg/relation/be
+  http://example.org/kg/relation/become
+  http://example.org/kg/relation/been
+  http://example.org/kg/relation/being
+  http://example.org/kg/relation/came
+  http://example.org/kg/relation/carried_in
+  http://example.org/kg/relation/characterize
+  http://example.org/kg/relation/characterizes
+  http://example.org/kg/relation/characterizes_For
+  http://example.org/kg/relation/classify
+  http://example.org/kg/relation/collect
+  http://example.org/kg/relation/collect_For
+  http://example.org/kg/relation/collected
+  http://example.org/kg/relation/compare
+  http://example.org/kg/relation/complete
+  http://example.org/kg/relation/conceptualized_in
+  http://example.org/kg/relation/confounded
+  http://example.org/kg/relation/confounded_by
+  http://example.org/kg/relation/consider
+  http://example.org/kg/relation/contains
+  http://example.org/kg/relation/defined_as
+  http://example.org/kg/relation/defined_in
+  http://example.org/kg/relation/depend_on
+  http://example.org/kg/relation/describe
+  http://example.org/kg/relation/describe_in
+  http://example.org/kg/relation/described_in
+  http://example.org/kg/relation/determine
+  http://example.org/kg/relation/determined
+  http://example.org/kg/relation/differ_across
+  http://example.org/kg/relation/display
+  http://example.org/kg/relation/disputes
+  http://example.org/kg/relation/do
+  http://example.org/kg/relation/does_in
+  http://example.org/kg/relation/does_with
+  http://example.org/kg/relation/eaten
+  http://example.org/kg/relation/ended
+  http://example.org/kg/relation/examines
+  http://example.org/kg/relation/examines_with
+  http://example.org/kg/relation/explain
+  http://example.org/kg/relation/finds
+  http://example.org/kg/relation/fit_in
+  http://example.org/kg/relation/flipped
+  http://example.org/kg/relation/focus_on
+  http://example.org/kg/relation/follow
+  http://example.org/kg/relation/forces
+  http://example.org/kg/relation/form
+  http://example.org/kg/relation/formed
+  http://example.org/kg/relation/found_in
+  http://example.org/kg/relation/gives
+  http://example.org/kg/relation/had
+  http://example.org/kg/relation/has
+  http://example.org/kg/relation/have
+  http://example.org/kg/relation/help
+  http://example.org/kg/relation/helps
+  http://example.org/kg/relation/include
+  http://example.org/kg/relation/includes
+  http://example.org/kg/relation/indicates
+  http://example.org/kg/relation/interact_with
+  http://example.org/kg/relation/involve
+  http://example.org/kg/relation/involves
+  http://example.org/kg/relation/is
+  http://example.org/kg/relation/is_Given
+  http://example.org/kg/relation/is_Since
+  http://example.org/kg/relation/is_in
+  http://example.org/kg/relation/is_to
+  http://example.org/kg/relation/learning
+  http://example.org/kg/relation/limited_to
+  http://example.org/kg/relation/loves
+  http://example.org/kg/relation/made
+  http://example.org/kg/relation/made_in
+  http://example.org/kg/relation/manages
+  http://example.org/kg/relation/meet
+  http://example.org/kg/relation/not_approve
+  http://example.org/kg/relation/not_contain
+  http://example.org/kg/relation/not_discuss
+  http://example.org/kg/relation/not_discuss_with
+  http://example.org/kg/relation/not_guarantee
+  http://example.org/kg/relation/not_have
+  http://example.org/kg/relation/not_include
+  http://example.org/kg/relation/not_invent
+  http://example.org/kg/relation/not_is
+  http://example.org/kg/relation/not_minimize
+  http://example.org/kg/relation/not_perform
+  http://example.org/kg/relation/not_proceed
+  http://example.org/kg/relation/not_proceed_with
+  http://example.org/kg/relation/not_provide
+  http://example.org/kg/relation/objects
+  http://example.org/kg/relation/occur_in
+  http://example.org/kg/relation/offers
+  http://example.org/kg/relation/operates
+  http://example.org/kg/relation/operates_on
+  http://example.org/kg/relation/organize
+  http://example.org/kg/relation/organized
+  http://example.org/kg/relation/organized_into
+  http://example.org/kg/relation/organizes
+  http://example.org/kg/relation/perform_at
+  http://example.org/kg/relation/perform_on
+  http://example.org/kg/relation/phonemes
+  http://example.org/kg/relation/phonemes_to
+  http://example.org/kg/relation/presented_at
+  http://example.org/kg/relation/presenting
+  http://example.org/kg/relation/presents
+  http://example.org/kg/relation/provide
+  http://example.org/kg/relation/provided
+  http://example.org/kg/relation/provides
+  http://example.org/kg/relation/qualify_as
+  http://example.org/kg/relation/quantifies
+  http://example.org/kg/relation/quantifies_of
+  http://example.org/kg/relation/refers_to
+  http://example.org/kg/relation/rely_on
+  http://example.org/kg/relation/report
+  http://example.org/kg/relation/report_For
+  http://example.org/kg/relation/reports
+  http://example.org/kg/relation/represented_in
+  http://example.org/kg/relation/represents
+  http://example.org/kg/relation/request
+  http://example.org/kg/relation/requests
+  http://example.org/kg/relation/researched_to
+  http://example.org/kg/relation/result
+  http://example.org/kg/relation/result_from
+  http://example.org/kg/relation/reviewed
+  http://example.org/kg/relation/separates
+  http://example.org/kg/relation/shows
+  http://example.org/kg/relation/stages
+  http://example.org/kg/relation/stages_to
+  http://example.org/kg/relation/started
+  http://example.org/kg/relation/state
+  http://example.org/kg/relation/stepped_like
+  http://example.org/kg/relation/structure
+  http://example.org/kg/relation/structure_as
+  http://example.org/kg/relation/submitted_for
+  http://example.org/kg/relation/summarize
+  http://example.org/kg/relation/supplies
+  http://example.org/kg/relation/takes
+  http://example.org/kg/relation/takes_during
+  http://example.org/kg/relation/tell
+  http://example.org/kg/relation/threatens
+  http://example.org/kg/relation/tossed
+  http://example.org/kg/relation/tossed_against
+  http://example.org/kg/relation/transmit
+  http://example.org/kg/relation/turn_to
+  http://example.org/kg/relation/updates
+  http://example.org/kg/relation/use
+  http://example.org/kg/relation/use_as
+  http://example.org/kg/relation/use_within
+  http://example.org/kg/relation/uses
+  http://example.org/kg/relation/using
+  http://example.org/kg/relation/vary_in
+  http://example.org/kg/relation/were
+  http://example.org/kg/relation/wish_To
+  http://www.w3.org/2000/01/rdf-schema#label
+
+Most relevant triples to the question (semantic seeds):
+  (0.79) Mario loves video games
+  (0.78) Mario loves @@@@@@isan & & & & & 
+
+
+  (0.72) Mario loves mushrooms
+  (0.72) Mario loves coins
+  (0.66) mario eaten Mushrooms
+
+CONTEXT (seed entities' neighborhood):
+Mario — loves → @@@@@@isan & & & & & 
+
+
+Mario — loves → coins
+Mario — loves → mushrooms
+Mario — loves → video games
+mario — collected → Mario 
+ Coins
+mario — eaten → Mushrooms
+
+QUESTION: What does mario love?
