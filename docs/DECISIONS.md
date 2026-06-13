@@ -4,6 +4,35 @@ Short, dated records of notable choices in this project. Newest first.
 
 ---
 
+## 2026-06-12 — Thin CLI wrapper; arg-parsing separated from worker code
+
+**Status:** Accepted
+
+**Context.** As the project grew (extraction + visualization), we needed a
+single entry point. The question was where argument-parsing should live.
+
+**Decision.** A thin top-level **`cli.py`** is the only place with
+`argparse`/argument logic. It dispatches to plain functions in the worker
+modules under `scripts/`:
+
+- `spacy_extract.run_spacy(path) -> Path`
+- `visualize.render(ttl, fmt) -> Path`, `visualize.resolve_targets(...)`
+- `rdf_common.emit(...)`
+
+Worker modules contain **no** argument parsing and **no** `if __name__ ==
+"__main__"` CLI block. They are importable, testable units; `cli.py` is the
+presentation/dispatch layer.
+
+**Why.** Keeps argument logic out of the files that do the work, avoids a
+monolith, and makes the worker functions reusable and easy to test in isolation.
+
+**Consequences.** The tool is driven via `python cli.py <command> ...` (e.g.
+`extract`, `visualize`); direct `python scripts/<module>.py` invocation is no
+longer the interface. Adding a new method/command means adding a worker function
+plus a small subparser in `cli.py`.
+
+---
+
 ## 2026-06-12 — Drop the SciPhi/Triplex (LLM) approach; spaCy only
 
 **Status:** Accepted

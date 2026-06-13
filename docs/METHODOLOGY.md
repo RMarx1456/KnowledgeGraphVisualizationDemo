@@ -106,11 +106,16 @@ jq -c 'select(.triples==0)' output/index.jsonl
 
 ## 7. Adding a new method
 
-1. Write `scripts/<method>_extract.py` that produces `(s, p, o)` triples and,
-   if available, a `{label: TYPE}` map.
+1. Write a worker module `scripts/<method>_extract.py` exposing a function (e.g.
+   `run_<method>(path) -> Path`) that produces `(s, p, o)` triples and, if
+   available, a `{label: TYPE}` map. **No argument parsing in the module** — that
+   belongs in `cli.py` (see `docs/DECISIONS.md`).
 2. Define `METHOD = "<method>"` and `VERSION = "vX.Y.Z"`.
 3. Call `emit(METHOD, VERSION, source_name, triples, types)` — naming, headers,
    folders, and the manifest are handled for you.
+4. Wire it into the wrapper: import the function in `cli.py` and add a subparser
+   (or extend `extract`) that dispatches to it. Visualization needs no changes —
+   `cli.py visualize` already works for any method's `.ttl`.
 
 ## 8. RDF namespaces
 
@@ -135,18 +140,22 @@ nothing to re-extract): **Raptor** converts Turtle to Graphviz DOT, then
 output/<method>/<run>.ttl  --(rapper)-->  DOT  --(dot)-->  viz/<method>/<run>.<fmt>
 ```
 
-`scripts/visualize.py` orchestrates both tools and writes the image to
-`viz/<method>/` using the **same filename stem** as the source run (different
-folder + extension), so every image is trivially linked back to the exact run —
-keeping the ID/version/method/timestamp identity intact.
+The `scripts/visualize.py` worker writes the image to `viz/<method>/` using the
+**same filename stem** as the source run (different folder + extension), so every
+image is trivially linked back to the exact run — keeping the
+ID/version/method/timestamp identity intact. It is driven through `cli.py`:
 
 ```bash
-python scripts/visualize.py                  # latest run (svg)
-python scripts/visualize.py latest spacy     # latest run of a method
-python scripts/visualize.py all              # every run in the manifest
-python scripts/visualize.py <run-id>         # a specific run by id
-python scripts/visualize.py path/to/run.ttl  # a specific file
-python scripts/visualize.py latest spacy --format png
+# render as part of extraction (image shares the new run's provenance)
+python cli.py extract <textfile> --image [--format png]
+
+# render an existing run
+python cli.py visualize                       # latest run (svg)
+python cli.py visualize latest --method spacy # latest run of a method
+python cli.py visualize all                   # every run in the manifest
+python cli.py visualize <run-id>              # a specific run by id
+python cli.py visualize path/to/run.ttl       # a specific file
+python cli.py visualize latest --format png
 ```
 
 Requires `rapper` (`sudo apt-get install -y raptor2-utils`) and `dot`

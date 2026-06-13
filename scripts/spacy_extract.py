@@ -1,22 +1,20 @@
-"""Triple extraction with spaCy (dependency-parse / rule-based).
+"""Triple extraction with spaCy (dependency-parse / rule-based) — worker module.
 
 Approach: parse each sentence, then read subject-verb-object triples off the
 dependency tree. Handles plain transitive verbs ("Mario loves coins") and
 copular sentences ("Cheese is pink" / "Water is a liquid"). Questions and
 imperatives (no subject) intentionally yield nothing.
 
-Usage:
-    python scripts/spacy_extract.py [path/to/text.txt]
+No CLI here by design — argument parsing lives in the top-level `cli.py` wrapper.
+Driven via:  python cli.py extract <textfile>
 """
 
-import sys
 from pathlib import Path
 
 import spacy
 
 from rdf_common import emit
 
-DEFAULT_TEXT = Path(__file__).resolve().parent.parent / "TxtData" / "SmallHandwritten.txt"
 METHOD = "spacy"
 VERSION = "v1.1.0"  # v1.1.0: sibling RDF namespaces for clean qname rendering
 
@@ -67,19 +65,10 @@ def extract_triples(doc):
     return triples
 
 
-def main():
-    path = Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_TEXT
-    text = path.read_text(encoding="utf-8")
-
+def run_spacy(path: Path) -> Path:
+    """Extract triples from a text file and emit a provenanced Turtle run.
+    Returns the path to the written .ttl. Called by the cli.py `extract` command."""
     nlp = spacy.load("en_core_web_sm")
-    doc = nlp(text)
-
+    doc = nlp(path.read_text(encoding="utf-8"))
     triples = extract_triples(doc)
-    out = emit(METHOD, VERSION, path.name, triples)
-
-    print(f"# spaCy: {len(triples)} triple(s) from {path.name} -> {out}\n")
-    print(out.read_text(encoding="utf-8"))
-
-
-if __name__ == "__main__":
-    main()
+    return emit(METHOD, VERSION, path.name, triples)

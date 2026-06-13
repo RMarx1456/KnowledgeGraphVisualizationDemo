@@ -1,0 +1,26 @@
+# @run-id    59217e1d
+# @method    spacy
+# @version   v1.1.0
+# @timestamp 2026-06-13T02:40:28Z
+# @source    SmallHandwritten.txt
+# @triples   3
+
+@prefix ex: <http://example.org/kg/entity/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rel: <http://example.org/kg/relation/> .
+
+ex:Cheese rdfs:label "Cheese" ;
+    rel:be ex:pink .
+
+ex:Mario rdfs:label "Mario" ;
+    rel:love ex:coins .
+
+ex:Water rdfs:label "Water" ;
+    rel:be ex:spicy .
+
+ex:coins rdfs:label "coins" .
+
+ex:pink rdfs:label "pink" .
+
+ex:spicy rdfs:label "spicy" .
+

@@ -26,28 +26,38 @@ Stop immediately!
 ## Setup
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
+python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 python -m spacy download en_core_web_sm
-
-# system tools for visualization (Raptor + Graphviz)
-sudo apt-get install -y raptor2-utils graphviz
+sudo apt-get install -y raptor2-utils graphviz   # for visualization
 ```
 
 No GPU, no model download beyond the ~12 MB `en_core_web_sm` — runs on any CPU.
+Full, step-by-step instructions and troubleshooting: [`docs/SETUP.md`](docs/SETUP.md).
+
+## Usage
+
+The tool is driven by a single wrapper, **`cli.py`**, which parses arguments and
+dispatches to the worker modules in `scripts/` (arg-parsing is kept out of the
+worker code — see [`docs/DECISIONS.md`](docs/DECISIONS.md)).
+
+```bash
+# extract triples from a text file -> a provenanced Turtle run
+python cli.py extract TxtData/SmallHandwritten.txt
+
+# ...and also render the graph image (off by default to save space)
+python cli.py extract TxtData/SmallHandwritten.txt --image
+python cli.py extract TxtData/SmallHandwritten.txt --image --format png
+```
+
+With `--image`, the picture is written with the **same filename/provenance** as
+its `.ttl` (same timestamp, method, version, and run-id).
 
 ## Method — spaCy (dependency-parse / rule-based)
 
 `scripts/spacy_extract.py` parses each sentence and reads triples off the
 dependency tree (subject → verb → object/complement). Lightweight, instant,
-fully local.
-
-```bash
-python scripts/spacy_extract.py
-```
-
-Turtle output (written under `output/spacy/`, see the naming convention below):
+fully local. Turtle output (written under `output/spacy/`):
 
 ```turtle
 ex:Cheese rdfs:label "Cheese" ;
@@ -78,16 +88,17 @@ Full spec, manifest schema, and example `jq` queries:
 
 ## Visualization (Raptor + Graphviz)
 
-Render any run's Turtle to an image. **Raptor** (`rapper`) converts Turtle →
-Graphviz DOT, then **Graphviz** (`dot`) renders it. Images mirror the source
-run's filename under `viz/<method>/`, so each graph links straight back to the
-run that produced it.
+Besides `extract --image`, you can render an **existing** run at any time.
+**Raptor** (`rapper`) converts Turtle → Graphviz DOT, then **Graphviz** (`dot`)
+renders it. Images mirror the source run's filename under `viz/<method>/`, so
+each graph links straight back to the run that produced it.
 
 ```bash
-python scripts/visualize.py                  # latest run -> SVG
-python scripts/visualize.py latest spacy --format png
-python scripts/visualize.py all              # every run in the manifest
-python scripts/visualize.py <run-id>         # a specific run
+python cli.py visualize                       # latest run -> SVG
+python cli.py visualize latest --method spacy --format png
+python cli.py visualize all                   # every run in the manifest
+python cli.py visualize <run-id>              # a specific run
+python cli.py visualize path/to/run.ttl       # a specific file
 ```
 
 Resources render as blue ellipses, literals as boxes, predicates as edge labels

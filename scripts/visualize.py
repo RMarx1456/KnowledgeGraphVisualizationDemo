@@ -1,4 +1,4 @@
-"""Visualize extracted RDF graphs with Raptor + Graphviz.
+"""Visualize extracted RDF graphs with Raptor + Graphviz — worker module.
 
 Pipeline:  output/<method>/<run>.ttl  --(rapper)-->  DOT  --(dot)-->  image
 
@@ -7,15 +7,11 @@ Pipeline:  output/<method>/<run>.ttl  --(rapper)-->  DOT  --(dot)-->  image
 
 Images mirror the source run's filename under viz/<method>/, so a rendered graph
 is trivially linked back to the exact run that produced it (same stem, different
-folder + extension).
+folder + extension) — the image carries the same id/version/method/timestamp
+provenance as the .ttl.
 
-Usage:
-    python scripts/visualize.py                  # render the latest run
-    python scripts/visualize.py latest spacy     # latest run of a method
-    python scripts/visualize.py all              # render every run in the manifest
-    python scripts/visualize.py <run-id>         # a specific run by its id
-    python scripts/visualize.py path/to/run.ttl  # a specific .ttl file
-    python scripts/visualize.py ... --format png # png instead of svg (default)
+No CLI here by design — argument parsing lives in the top-level `cli.py` wrapper.
+Driven via:  python cli.py visualize <selector>
 """
 
 import json
@@ -98,28 +94,3 @@ def render(ttl: Path, fmt: str) -> Path:
         input=dot, text=True, check=True,
     )
     return out_path
-
-
-def main():
-    args = [a for a in sys.argv[1:]]
-    fmt = "svg"
-    if "--format" in args:
-        i = args.index("--format")
-        fmt = args[i + 1]
-        del args[i:i + 2]
-
-    arg = args[0] if args else "latest"
-    method_filter = args[1] if len(args) > 1 else None
-
-    require_tools()
-    targets = resolve_targets(arg, method_filter)
-    if not targets:
-        sys.exit("Nothing to render.")
-
-    for ttl in targets:
-        out = render(ttl, fmt)
-        print(f"{ttl.name}  ->  {out.relative_to(ROOT)}")
-
-
-if __name__ == "__main__":
-    main()
