@@ -4,6 +4,53 @@ Short, dated records of notable choices in this project. Newest first.
 
 ---
 
+## 2026-06-12 — NonBijectiveText stress test: negation, passive, comments, entity identity
+
+**Status:** Accepted (spaCy method v1.3.0)
+
+**Context.** `TxtData/NonBijectiveText.txt` deliberately maps **many surface forms
+to the same underlying relation/entity** ("non-bijective"), and adds negations,
+`#`-comments, assembly code, and symbol garbage. Run through the v1.2.0
+extractor, it exposed four issues: (1) negation was **silently inverted** — "Cheese
+is **not** metal" became `Cheese — is → metal`; (2) passive restatements
+("Coins get collected by mario") produced **no triple**; (3) `#`-comments and
+garbage became facts; (4) case/synonym variants (`Mario`/`mario`,
+`adores`/`loves`) would never merge.
+
+**Decisions (the user's calls).**
+
+1. **Negation — handle first.** Implemented: a `neg` dependency marks the
+   predicate with a **`not_` prefix** (`rel:not_is`). We *preserve* the negation
+   as a first-class relation rather than drop the triple or assert its opposite.
+   Predicate is otherwise verbatim (no lemmatizing).
+2. **Comment / code / symbol stripping — deliberately NOT done.** Downstream
+   applications may treat `#`-comments, assembly (`INT 80H`), and symbol tokens
+   as **separate meaningful constructs**, so the loader/extractor keeps them.
+   They surface as ordinary (often noisy) triples — intentional, not a bug.
+3. **Passive voice — normalize.** Implemented: `X gets V-ed by Y` →
+   `(Y, V, X)` via `nsubjpass` + the `by`-agent, restoring active direction so a
+   passive restatement lands on the same edge as its active form. The verb stays
+   verbatim (`collected`, not `collect`).
+4. **Entity & synonym canonicalization — the ontologist's job, not the parser's.**
+   The core "non-bijective" merge (`Mario` ≡ `mario`; `adores` ≈ `loves`) is
+   **not automated**. It requires schema design, relation/term choices, and human
+   judgment — substantially **manual ontology modeling**, not dependency parsing.
+   The extractor stays faithful (distinct surface forms → distinct nodes); any
+   merging is a separate, explicit, human-driven step. We may experiment later,
+   but expect it to remain ontologist-led.
+
+**Why.** Negation and passive are *correctness/direction* fixes with no
+ontological baggage. Keeping comments/code and not merging entities are both about
+**not imposing commitments the project hasn't made** — consistent with the
+verbatim-predicate rule above.
+
+**Consequences.** spaCy method bumped to **v1.3.0**. Known remaining limitations
+(out of scope, see `docs/EXTRACTION_QUALITY.md`): full-subtree objects still form
+run-on mega-nodes; missing sentence punctuation causes segmentation errors (e.g.
+"Luigi adores Mario" merged with the next line, so `adores` was dropped).
+
+---
+
 ## 2026-06-12 — RAG over the RDF: hybrid retrieval, rdflib-endpoint, Claude API
 
 **Status:** Accepted

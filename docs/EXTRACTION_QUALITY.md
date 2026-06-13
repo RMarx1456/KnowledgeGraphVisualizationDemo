@@ -27,7 +27,11 @@ In rough priority order (biggest payoff first):
   - **De-hyphenate** line-wrapped words (`System-\natic` → `Systematic`) — a
     line break must not split a token into two false entities.
   - **Strip non-content lines:** running headers/footers, page numbers, rule
-    lines, figure/equation fragments, reference boilerplate.
+    lines, figure/equation fragments, reference boilerplate. **Caveat —
+    judgment call:** stripping `#`-comments, code (`INT 80H`), or symbol tokens
+    is *not* always desirable; downstream applications may treat them as separate
+    meaningful constructs. This project deliberately **keeps** them (see
+    `docs/DECISIONS.md`). Strip only what is unambiguously layout noise.
   - **Remove control characters** (form-feed `\x0c`, etc.) — they also break
     downstream serializers (e.g. invalid XML in SVG). See `scripts/textload.py`.
   - Normalize whitespace and join sentences across page breaks.
@@ -37,11 +41,25 @@ In rough priority order (biggest payoff first):
   `rel:phonemes`). Optionally restrict to lowercased surface forms — *without*
   lemmatizing (preserving the in-text relation is a separate rule, see
   `docs/DECISIONS.md`).
+- **Mark negation, don't drop it.** A `neg` dependency ("is **not** metal")
+  must not be ignored — silently dropping it makes the graph assert the
+  *opposite* of the text. Mark it instead (this project uses a `not_` predicate
+  prefix → `rel:not_is`), keeping the negation as a first-class relation.
+  *(Implemented, spaCy v1.3.0.)*
+- **Normalize passive voice.** `X gets V-ed by Y` → `(Y, V, X)` (via `nsubjpass`
+  + the `by`-agent), so a passive restatement lands on the same edge as its
+  active form rather than being dropped. Keep the verb verbatim (`collected`, not
+  `collect`). *(Implemented, spaCy v1.3.0.)*
 - **Filter degenerate triples.** Drop triples whose subject or object is empty,
   a single stop-word, pure punctuation/numerals, or absurdly long (e.g. object
   > N tokens — a sign a clause leaked in).
-- **Deduplicate.** Collapse repeated `(s, p, o)` triples; optionally merge
-  entities that differ only by case/whitespace/trivial morphology.
+- **Deduplicate.** Collapse repeated `(s, p, o)` triples. Trivial entity merging
+  (exact duplicates, whitespace) is safe here. **But semantic identity is an
+  ontologist's job, not the parser's:** merging case/synonym variants
+  (`Mario` ≡ `mario`, `adores` ≈ `loves`) requires schema design and human
+  judgment about what counts as "the same" entity or relation. Keep that as a
+  separate, explicit, manual ontology-modeling step — the extractor should stay
+  faithful (distinct surface forms → distinct nodes). See `docs/DECISIONS.md`.
 
 ## 2. Shrink — show a legible subgraph
 
