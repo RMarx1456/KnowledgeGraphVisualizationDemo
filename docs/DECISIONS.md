@@ -4,6 +4,51 @@ Short, dated records of notable choices in this project. Newest first.
 
 ---
 
+## 2026-06-12 — RAG over the RDF: hybrid retrieval, rdflib-endpoint, Claude API
+
+**Status:** Accepted
+
+**Context.** Goal: make the extracted RDF queryable by an LLM for
+retrieval-augmented generation, with a SPARQL endpoint.
+
+**Decisions.**
+
+- **Hybrid retrieval** — combine semantic vector search (find entry-point
+  entities) with **SPARQL** graph expansion (pull their neighborhoods). The user
+  chose "both" over pure text-to-SPARQL or pure vector RAG.
+- **SPARQL endpoint: `rdflib-endpoint`** — serves the existing rdflib graph
+  (loaded from `output/spacy/*.ttl`) as a SPARQL 1.1 HTTP endpoint via FastAPI.
+  Pure Python, CPU-only, right-sized for hundreds of triples. (Oxigraph reserved
+  for if/when we outgrow rdflib.)
+- **Generation: Claude API, `claude-opus-4-8`** — hosted, no local GPU; keeps
+  with the "hosted LLM API, not local weights" decision above. Uses the
+  `anthropic` SDK with tool use (a `sparql_query` tool) and adaptive thinking.
+- **Embeddings: `fastembed` (ONNX), not `sentence-transformers`.** The vector
+  side needs an embedding model, but `sentence-transformers` pulls in **torch** —
+  the exact heavy dependency we removed (see the Triplex decision above).
+  `fastembed` runs small quantized models on **onnxruntime** (CPU, no torch),
+  preserving the lightweight footprint. Anthropic has no embeddings endpoint, so
+  a local embedder is required regardless; `fastembed` is the light one.
+
+**Why.** Hybrid gives both semantic recall and exact graph structure; the stack
+stays CPU-only and torch-free; generation reuses the already-chosen Claude API.
+
+**Generation is optional and gated.** The user cannot obtain a paid API key
+right now (financial). So **retrieval runs fully free/local** (SPARQL endpoint +
+`fastembed` embeddings, CPU/ONNX, no key); only the final Claude generation step
+needs `ANTHROPIC_API_KEY`. Without a key, the `ask` command returns the assembled
+retrieval context (the prompt that *would* go to the LLM) — a useful free
+fallback, and the same command yields prose once a key exists. No hard dependency
+on the paid API. See the `no-paid-apis-now` memory.
+
+**Consequences.** New deps: `rdflib-endpoint`, `fastembed`, `anthropic` (+
+`numpy` for in-memory cosine search at this scale — no separate vector DB yet).
+`anthropic` is imported lazily so the toolchain runs without a key. Worker
+modules stay parser-free; the RAG/endpoint commands are dispatched from `cli.py`
+(see the CLI-wrapper decision above).
+
+---
+
 ## 2026-06-12 — Predicates use verbatim in-text relation, not spaCy lemmas
 
 **Status:** Accepted (spaCy method v1.2.0)

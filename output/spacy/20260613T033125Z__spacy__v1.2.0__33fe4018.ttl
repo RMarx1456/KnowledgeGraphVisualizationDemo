@@ -1,0 +1,65 @@
+# @run-id    33fe4018
+# @method    spacy
+# @version   v1.2.0
+# @timestamp 2026-06-13T03:31:25Z
+# @source    NonBijectiveText.txt
+# @triples   12
+
+@prefix ex: <http://example.org/kg/entity/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rel: <http://example.org/kg/relation/> .
+
+ex:A_brother rdfs:label "A brother" ;
+    rel:is ex:a_plant,
+        ex:a_sibling .
+
+ex:Cheese rdfs:label "Cheese" ;
+    rel:is ex:metal .
+
+ex:Luigi rdfs:label "Luigi" ;
+    rel:is ex:Mario_s_brother .
+
+ex:Mario rdfs:label "Mario" ;
+    rel:loves ex:coins,
+        ex:isan,
+        ex:mushrooms,
+        ex:video_games .
+
+ex:This rdfs:label "This" ;
+    rel:is ex:a_comment .
+
+ex:Water rdfs:label "Water" ;
+    rel:is ex:an_animal,
+        ex:spicy .
+
+ex:an_action_performed_by_Mario_Cheese rdfs:label """an action performed by Mario 
+
+ Cheese""" ;
+    rel:is ex:pink .
+
+ex:Mario_s_brother rdfs:label "Mario 's brother" .
+
+ex:a_comment rdfs:label "a comment" .
+
+ex:a_plant rdfs:label "a plant" .
+
+ex:a_sibling rdfs:label "a sibling" .
+
+ex:an_animal rdfs:label "an animal" .
+
+ex:coins rdfs:label "coins" .
+
+ex:isan rdfs:label """@@@@@@isan & & & & & 
+
+""" .
+
+ex:metal rdfs:label "metal" .
+
+ex:mushrooms rdfs:label "mushrooms" .
+
+ex:pink rdfs:label "pink" .
+
+ex:spicy rdfs:label "spicy" .
+
+ex:video_games rdfs:label "video games" .
+

@@ -1,0 +1,37 @@
+Mario loves coins.
+Mario loves mushrooms.
+Mario loves jumping.
+
+Luigi is Mario's brother.
+
+A brother is a sibling.
+A brother is not a plant.
+
+Luigi adores Mario
+Coins get collected by mario.
+Mushrooms get eaten by mario.
+jumping is an action performed by Mario
+
+Cheese is pink.
+Cheese is not metal.
+
+Water is spicy.
+Water is not an animal.
+
+What is a flashdrive?
+How do I make lemonade?
+Stop immediately!
+
+Stop this immediately!
+
+INT 80H
+MOV EBX, 1
+
+# A comment!
+
+# This is a comment!
+
+# Mario loves video games!
+
+@@@@@@isan&&&&&
+

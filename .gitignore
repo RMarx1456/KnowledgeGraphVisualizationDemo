@@ -8,5 +8,8 @@ __pycache__/
 # Rendered graph images — regenerable from output/*.ttl via scripts/visualize.py
 viz/
 
+# Embedding index — regenerable from output/*.ttl via `cli.py index`
+output/rag_index/
+
 # Note: output/ is intentionally tracked — the .ttl runs and index.jsonl are the
 # retrievable, versioned artifacts this project produces.

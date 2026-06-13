@@ -13,6 +13,16 @@ Commands:
     python cli.py visualize [selector] [--method M] [--format svg|png]
         Render an existing run to an image. selector: latest (default) | all
         | <run-id> | path/to/run.ttl
+
+    python cli.py index
+        Build the semantic embedding index over the graph (free, local).
+
+    python cli.py serve [--host H] [--port P]
+        Start a SPARQL endpoint over the graph (free, local).
+
+    python cli.py ask "<question>" [-k N]
+        Hybrid RAG: semantic seed + graph expansion. Generates a prose answer
+        if ANTHROPIC_API_KEY is set, else returns the retrieved context.
 """
 
 import argparse
@@ -46,6 +56,26 @@ def cmd_visualize(args: argparse.Namespace) -> None:
         print(f"{ttl.name}  ->  {img.relative_to(ROOT)}")
 
 
+def cmd_index(args: argparse.Namespace) -> None:
+    import embed_index
+    n = embed_index.build_index()
+    print(f"indexed {n} triples -> {embed_index.INDEX_DIR.relative_to(ROOT)}")
+
+
+def cmd_serve(args: argparse.Namespace) -> None:
+    import uvicorn
+    from sparql_server import build_app
+    print(f"SPARQL endpoint + UI at http://{args.host}:{args.port}  (Ctrl-C to stop)")
+    uvicorn.run(build_app(), host=args.host, port=args.port)
+
+
+def cmd_ask(args: argparse.Namespace) -> None:
+    import rag
+    result = rag.answer(args.question, k=args.k)
+    print(f"[mode: {result['mode']}]\n")
+    print(result["text"])
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="cli.py",
@@ -68,6 +98,19 @@ def build_parser() -> argparse.ArgumentParser:
     v.add_argument("--format", choices=["svg", "png"], default="svg",
                    help="image format (default: svg)")
     v.set_defaults(func=cmd_visualize)
+
+    ix = sub.add_parser("index", help="build the semantic embedding index (free, local)")
+    ix.set_defaults(func=cmd_index)
+
+    s = sub.add_parser("serve", help="start a SPARQL endpoint over the graph (free, local)")
+    s.add_argument("--host", default="127.0.0.1", help="bind host (default: 127.0.0.1)")
+    s.add_argument("--port", type=int, default=8000, help="bind port (default: 8000)")
+    s.set_defaults(func=cmd_serve)
+
+    a = sub.add_parser("ask", help="hybrid RAG question over the graph")
+    a.add_argument("question", help="natural-language question")
+    a.add_argument("-k", type=int, default=5, help="number of semantic seed triples (default: 5)")
+    a.set_defaults(func=cmd_ask)
 
     return parser
 

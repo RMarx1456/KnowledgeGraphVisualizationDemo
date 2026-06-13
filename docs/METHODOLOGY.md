@@ -161,3 +161,11 @@ python cli.py visualize latest --format png
 Requires `rapper` (`sudo apt-get install -y raptor2-utils`) and `dot`
 (`sudo apt-get install -y graphviz`). `viz/` is regenerable from the `.ttl`
 files and is git-ignored.
+
+## 10. See also
+
+- `docs/EXTRACTION_QUALITY.md` — methodology for **de-noising** (raising
+  per-triple signal) and **shrinking** (rendering a legible subgraph) when an
+  extraction is noisy or too large to view.
+- `docs/DECISIONS.md` — why spaCy over an LLM, verbatim predicates, the thin
+  CLI wrapper, and the RAG architecture.

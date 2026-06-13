@@ -107,6 +107,34 @@ Resources render as blue ellipses, literals as boxes, predicates as edge labels
 (`rel:be`, `rel:love`). `viz/` is regenerable from the `.ttl` files, so it's
 git-ignored. See [`docs/METHODOLOGY.md`](docs/METHODOLOGY.md) §9 for details.
 
+## Querying the graph (SPARQL + RAG)
+
+The extracted RDF is queryable two ways — **both free, local, and CPU-only**
+(no API key, no GPU). See [`docs/DECISIONS.md`](docs/DECISIONS.md) for the design.
+
+**SPARQL endpoint** — serves the graph (latest run per source) as a SPARQL 1.1
+HTTP endpoint with a query UI, via `rdflib-endpoint`:
+
+```bash
+python cli.py serve            # http://127.0.0.1:8000  (UI + SPARQL)
+```
+
+**Hybrid RAG** — `ask` combines *semantic* retrieval (embed the question with
+`fastembed`/ONNX, find the most similar triples) with *graph* expansion (pull
+those entities' neighborhoods), then answers:
+
+```bash
+python cli.py index                      # build the embedding index once (free)
+python cli.py ask "What does Mario love?"
+```
+
+Generation is **optional and gated on `ANTHROPIC_API_KEY`**:
+
+- **With a key** → Claude (`claude-opus-4-8`) writes a grounded prose answer.
+- **Without a key** → `ask` returns the assembled retrieval context (the exact
+  triples + schema that *would* be sent to the LLM) — useful on its own, and the
+  same command produces prose once a key is set. Nothing requires payment.
+
 ## Why not a local LLM?
 
 Briefly: this box's AMD **Radeon R9 380X** (`gfx803`) isn't supported by modern

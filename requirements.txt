@@ -7,3 +7,10 @@ rdflib>=7.0
 spacy>=3.7
 # en_core_web_sm is installed separately:
 #   python -m spacy download en_core_web_sm
+
+# RAG over the graph (all CPU-only / torch-free)
+rdflib-endpoint>=0.6   # SPARQL 1.1 HTTP endpoint over the rdflib graph
+uvicorn                # ASGI server for the endpoint
+fastembed              # ONNX embeddings (no torch) for semantic retrieval
+numpy                  # in-memory cosine search
+anthropic              # optional: prose generation, only if ANTHROPIC_API_KEY is set
